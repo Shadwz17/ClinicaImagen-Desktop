@@ -38,5 +38,10 @@ namespace ClinicaImagen
             Form2 form2 = new Form2();
             form2.Show();
         }
+
+        private void checkBox74_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
