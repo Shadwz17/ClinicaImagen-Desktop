@@ -24,13 +24,14 @@ namespace ClinicaImagen
             datosUsuario();
             lblCorreo.Text = $"Correo: \n{datos[0]}";
             lblUsuario.Text = $"Usuario: \n{datos[1]}";
+            
         }
-
+        
         private void datosUsuario()
         {
             using (MySqlConnection connection = new MySqlConnection(MainBD.connString))
             {
-                using (MySqlCommand cmd = new MySqlCommand($"SELECT correo, nombre from usuarios WHERE correo=\"{FormLogin.informacion.correoLogin}\"", connection))
+                using (MySqlCommand cmd = new MySqlCommand($"SELECT email, nombre from usuarios WHERE email=\"{FormLogin.informacion.correoLogin}\"", connection))
                 {
                     connection.Open();
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -49,7 +50,7 @@ namespace ClinicaImagen
             DataTable usuarios = new DataTable();
             using (MySqlConnection connection =  new MySqlConnection(MainBD.connString))
             {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT correo, passwd, nombre from usuarios WHERE verificado=1 AND cargo!=1", connection))
+                using (MySqlCommand cmd = new MySqlCommand("SELECT email, passwd, nombre from usuarios WHERE verificado=1 AND cargo=\"Asesor\"", connection))
                 {
                     connection.Open();
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -65,7 +66,7 @@ namespace ClinicaImagen
             DataTable usuarios = new DataTable();
             using (MySqlConnection connection = new MySqlConnection(MainBD.connString))
             {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT correo, passwd, nombre from usuarios WHERE verificado=0", connection))
+                using (MySqlCommand cmd = new MySqlCommand("SELECT email, passwd, nombre from usuarios WHERE verificado=0", connection))
                 {
                     connection.Open();
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -109,7 +110,7 @@ namespace ClinicaImagen
 
                 using (MySqlConnection connection = new MySqlConnection(MainBD.connString))
                 {
-                    using (MySqlCommand verificarQuery = new MySqlCommand($"UPDATE usuarios SET verificado=1 WHERE correo=\"{correo}\";", connection))
+                    using (MySqlCommand verificarQuery = new MySqlCommand($"UPDATE usuarios SET verificado=1 WHERE email=\"{correo}\";", connection))
                     {
                         connection.Open();
                         MySqlDataReader reader = verificarQuery.ExecuteReader();

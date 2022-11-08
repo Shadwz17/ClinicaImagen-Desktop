@@ -35,20 +35,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.MB1 = new System.Windows.Forms.CheckBox();
+            this.MM = new System.Windows.Forms.CheckBox();
+            this.MM2 = new System.Windows.Forms.CheckBox();
+            this.MB2 = new System.Windows.Forms.CheckBox();
+            this.MM3 = new System.Windows.Forms.CheckBox();
+            this.MM4 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -64,27 +62,35 @@
             this.checkBox38 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.M4 = new System.Windows.Forms.RadioButton();
+            this.M3 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.M7 = new System.Windows.Forms.RadioButton();
+            this.M6 = new System.Windows.Forms.RadioButton();
+            this.M5 = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.O1 = new System.Windows.Forms.RadioButton();
+            this.S1 = new System.Windows.Forms.RadioButton();
+            this.D2 = new System.Windows.Forms.RadioButton();
+            this.D1 = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.D3 = new System.Windows.Forms.RadioButton();
+            this.C1 = new System.Windows.Forms.RadioButton();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.D4 = new System.Windows.Forms.RadioButton();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
-            this.checkBox26 = new System.Windows.Forms.CheckBox();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
+            this.N3 = new System.Windows.Forms.RadioButton();
+            this.P3 = new System.Windows.Forms.RadioButton();
+            this.S4 = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
+            this.P1 = new System.Windows.Forms.RadioButton();
+            this.S2 = new System.Windows.Forms.RadioButton();
+            this.N1 = new System.Windows.Forms.RadioButton();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.checkBox28 = new System.Windows.Forms.CheckBox();
+            this.N2 = new System.Windows.Forms.RadioButton();
+            this.P2 = new System.Windows.Forms.RadioButton();
+            this.S3 = new System.Windows.Forms.RadioButton();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.checkBox29 = new System.Windows.Forms.CheckBox();
             this.checkBox30 = new System.Windows.Forms.CheckBox();
@@ -95,16 +101,10 @@
             this.checkBox36 = new System.Windows.Forms.CheckBox();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.M2 = new System.Windows.Forms.RadioButton();
+            this.M1 = new System.Windows.Forms.RadioButton();
+            this.M8 = new System.Windows.Forms.RadioButton();
+            this.C2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -188,65 +188,65 @@
             this.label2.Text = "5 - Linea media: si el cambio es > a 2mm pueden necesitarse stripping.";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // checkBox6
+            // MB1
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(115, 49);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(111, 19);
-            this.checkBox6.TabIndex = 96;
-            this.checkBox6.Text = "Mover Izquierda";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.MB1.AutoSize = true;
+            this.MB1.Location = new System.Drawing.Point(115, 49);
+            this.MB1.Name = "MB1";
+            this.MB1.Size = new System.Drawing.Size(111, 19);
+            this.MB1.TabIndex = 96;
+            this.MB1.Text = "Mover Izquierda";
+            this.MB1.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // MM
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(232, 49);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(65, 19);
-            this.checkBox7.TabIndex = 97;
-            this.checkBox7.Text = "1-2mm";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.MM.AutoSize = true;
+            this.MM.Location = new System.Drawing.Point(232, 49);
+            this.MM.Name = "MM";
+            this.MM.Size = new System.Drawing.Size(65, 19);
+            this.MM.TabIndex = 97;
+            this.MM.Text = "1-2mm";
+            this.MM.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // MM2
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(297, 49);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(81, 19);
-            this.checkBox8.TabIndex = 98;
-            this.checkBox8.Text = "+ de 2mm";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.MM2.AutoSize = true;
+            this.MM2.Location = new System.Drawing.Point(297, 49);
+            this.MM2.Name = "MM2";
+            this.MM2.Size = new System.Drawing.Size(81, 19);
+            this.MM2.TabIndex = 98;
+            this.MM2.Text = "+ de 2mm";
+            this.MM2.UseVisualStyleBackColor = true;
             // 
-            // checkBox11
+            // MB2
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(114, 123);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(111, 19);
-            this.checkBox11.TabIndex = 101;
-            this.checkBox11.Text = "Mover Izquierda";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.MB2.AutoSize = true;
+            this.MB2.Location = new System.Drawing.Point(114, 123);
+            this.MB2.Name = "MB2";
+            this.MB2.Size = new System.Drawing.Size(111, 19);
+            this.MB2.TabIndex = 101;
+            this.MB2.Text = "Mover Izquierda";
+            this.MB2.UseVisualStyleBackColor = true;
             // 
-            // checkBox12
+            // MM3
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(228, 123);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(65, 19);
-            this.checkBox12.TabIndex = 102;
-            this.checkBox12.Text = "1-2mm";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.MM3.AutoSize = true;
+            this.MM3.Location = new System.Drawing.Point(228, 123);
+            this.MM3.Name = "MM3";
+            this.MM3.Size = new System.Drawing.Size(65, 19);
+            this.MM3.TabIndex = 102;
+            this.MM3.Text = "1-2mm";
+            this.MM3.UseVisualStyleBackColor = true;
             // 
-            // checkBox13
+            // MM4
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(299, 123);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(81, 19);
-            this.checkBox13.TabIndex = 103;
-            this.checkBox13.Text = "+ de 2mm";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.MM4.AutoSize = true;
+            this.MM4.Location = new System.Drawing.Point(299, 123);
+            this.MM4.Name = "MM4";
+            this.MM4.Size = new System.Drawing.Size(81, 19);
+            this.MM4.TabIndex = 103;
+            this.MM4.Text = "+ de 2mm";
+            this.MM4.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -306,26 +306,6 @@
             this.label9.Size = new System.Drawing.Size(66, 19);
             this.label9.TabIndex = 113;
             this.label9.Text = "Superior:";
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(0, 7);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(160, 19);
-            this.checkBox18.TabIndex = 114;
-            this.checkBox18.Text = "Cerrar todos los espacios ";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(160, 8);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(104, 19);
-            this.checkBox19.TabIndex = 115;
-            this.checkBox19.Text = "Dejar espacios ";
-            this.checkBox19.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -470,48 +450,48 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.M4);
+            this.groupBox2.Controls.Add(this.M3);
             this.groupBox2.Location = new System.Drawing.Point(258, 151);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(131, 22);
             this.groupBox2.TabIndex = 148;
             this.groupBox2.TabStop = false;
             // 
-            // radioButton2
+            // M4
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(71, 5);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(66, 19);
-            this.radioButton2.TabIndex = 158;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Mejorar";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.M4.AutoSize = true;
+            this.M4.Location = new System.Drawing.Point(71, 5);
+            this.M4.Name = "M4";
+            this.M4.Size = new System.Drawing.Size(66, 19);
+            this.M4.TabIndex = 158;
+            this.M4.TabStop = true;
+            this.M4.Text = "Mejorar";
+            this.M4.UseVisualStyleBackColor = true;
+            this.M4.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // radioButton1
+            // M3
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(0, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(76, 19);
-            this.radioButton1.TabIndex = 157;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Mantener";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.M3.AutoSize = true;
+            this.M3.Location = new System.Drawing.Point(0, 5);
+            this.M3.Name = "M3";
+            this.M3.Size = new System.Drawing.Size(76, 19);
+            this.M3.TabIndex = 157;
+            this.M3.TabStop = true;
+            this.M3.Text = "Mantener";
+            this.M3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton11);
-            this.groupBox3.Controls.Add(this.radioButton10);
-            this.groupBox3.Controls.Add(this.radioButton9);
-            this.groupBox3.Controls.Add(this.checkBox6);
-            this.groupBox3.Controls.Add(this.checkBox7);
-            this.groupBox3.Controls.Add(this.checkBox8);
-            this.groupBox3.Controls.Add(this.checkBox11);
-            this.groupBox3.Controls.Add(this.checkBox12);
-            this.groupBox3.Controls.Add(this.checkBox13);
+            this.groupBox3.Controls.Add(this.M7);
+            this.groupBox3.Controls.Add(this.M6);
+            this.groupBox3.Controls.Add(this.M5);
+            this.groupBox3.Controls.Add(this.MB1);
+            this.groupBox3.Controls.Add(this.MM);
+            this.groupBox3.Controls.Add(this.MM2);
+            this.groupBox3.Controls.Add(this.MB2);
+            this.groupBox3.Controls.Add(this.MM3);
+            this.groupBox3.Controls.Add(this.MM4);
             this.groupBox3.Location = new System.Drawing.Point(127, 229);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(379, 138);
@@ -519,28 +499,127 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // M7
+            // 
+            this.M7.AutoSize = true;
+            this.M7.Location = new System.Drawing.Point(4, 84);
+            this.M7.Name = "M7";
+            this.M7.Size = new System.Drawing.Size(100, 19);
+            this.M7.TabIndex = 106;
+            this.M7.TabStop = true;
+            this.M7.Text = "Mover Inferior";
+            this.M7.UseVisualStyleBackColor = true;
+            // 
+            // M6
+            // 
+            this.M6.AutoSize = true;
+            this.M6.Location = new System.Drawing.Point(4, 47);
+            this.M6.Name = "M6";
+            this.M6.Size = new System.Drawing.Size(105, 19);
+            this.M6.TabIndex = 105;
+            this.M6.TabStop = true;
+            this.M6.Text = "Mover Derecha";
+            this.M6.UseVisualStyleBackColor = true;
+            // 
+            // M5
+            // 
+            this.M5.AutoSize = true;
+            this.M5.Location = new System.Drawing.Point(5, 12);
+            this.M5.Name = "M5";
+            this.M5.Size = new System.Drawing.Size(123, 19);
+            this.M5.TabIndex = 104;
+            this.M5.TabStop = true;
+            this.M5.Text = "Mantener Superior";
+            this.M5.UseVisualStyleBackColor = true;
+            // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.radioButton8);
-            this.groupBox4.Controls.Add(this.radioButton7);
-            this.groupBox4.Controls.Add(this.radioButton6);
+            this.groupBox4.Controls.Add(this.O1);
+            this.groupBox4.Controls.Add(this.S1);
+            this.groupBox4.Controls.Add(this.D2);
             this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.radioButton5);
+            this.groupBox4.Controls.Add(this.D1);
             this.groupBox4.Location = new System.Drawing.Point(129, 432);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(438, 100);
             this.groupBox4.TabIndex = 150;
             this.groupBox4.TabStop = false;
             // 
+            // O1
+            // 
+            this.O1.AutoSize = true;
+            this.O1.Location = new System.Drawing.Point(5, 75);
+            this.O1.Name = "O1";
+            this.O1.Size = new System.Drawing.Size(60, 19);
+            this.O1.TabIndex = 162;
+            this.O1.TabStop = true;
+            this.O1.Text = "Otros: ";
+            this.O1.UseVisualStyleBackColor = true;
+            // 
+            // S1
+            // 
+            this.S1.AutoSize = true;
+            this.S1.Location = new System.Drawing.Point(6, 50);
+            this.S1.Name = "S1";
+            this.S1.Size = new System.Drawing.Size(317, 19);
+            this.S1.TabIndex = 161;
+            this.S1.TabStop = true;
+            this.S1.Text = "Stripping arcada opuesta para cerrar todos los espacios ";
+            this.S1.UseVisualStyleBackColor = true;
+            // 
+            // D2
+            // 
+            this.D2.AutoSize = true;
+            this.D2.Location = new System.Drawing.Point(6, 30);
+            this.D2.Name = "D2";
+            this.D2.Size = new System.Drawing.Size(100, 19);
+            this.D2.TabIndex = 160;
+            this.D2.TabStop = true;
+            this.D2.Text = "Distal Caninos";
+            this.D2.UseVisualStyleBackColor = true;
+            // 
+            // D1
+            // 
+            this.D1.AutoSize = true;
+            this.D1.Location = new System.Drawing.Point(6, 11);
+            this.D1.Name = "D1";
+            this.D1.Size = new System.Drawing.Size(148, 19);
+            this.D1.TabIndex = 159;
+            this.D1.TabStop = true;
+            this.D1.Text = "Distal Incisivos laterales";
+            this.D1.UseVisualStyleBackColor = true;
+            // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.checkBox18);
-            this.groupBox5.Controls.Add(this.checkBox19);
+            this.groupBox5.Controls.Add(this.D3);
+            this.groupBox5.Controls.Add(this.C1);
             this.groupBox5.Location = new System.Drawing.Point(190, 576);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(257, 26);
             this.groupBox5.TabIndex = 151;
             this.groupBox5.TabStop = false;
+            // 
+            // D3
+            // 
+            this.D3.AutoSize = true;
+            this.D3.Location = new System.Drawing.Point(156, 7);
+            this.D3.Name = "D3";
+            this.D3.Size = new System.Drawing.Size(95, 19);
+            this.D3.TabIndex = 165;
+            this.D3.TabStop = true;
+            this.D3.Text = "Dejar espacio";
+            this.D3.UseVisualStyleBackColor = true;
+            // 
+            // C1
+            // 
+            this.C1.AutoSize = true;
+            this.C1.Location = new System.Drawing.Point(0, 7);
+            this.C1.Name = "C1";
+            this.C1.Size = new System.Drawing.Size(156, 19);
+            this.C1.TabIndex = 163;
+            this.C1.TabStop = true;
+            this.C1.Text = "Cerrar todos los espacios";
+            this.C1.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -555,156 +634,156 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.checkBox2);
-            this.groupBox8.Controls.Add(this.checkBox3);
+            this.groupBox8.Controls.Add(this.D4);
             this.groupBox8.Location = new System.Drawing.Point(187, 606);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(257, 26);
             this.groupBox8.TabIndex = 152;
             this.groupBox8.TabStop = false;
             // 
-            // checkBox2
+            // D4
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(0, 8);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(160, 19);
-            this.checkBox2.TabIndex = 114;
-            this.checkBox2.Text = "Cerrar todos los espacios ";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(160, 8);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(104, 19);
-            this.checkBox3.TabIndex = 115;
-            this.checkBox3.Text = "Dejar espacios ";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.D4.AutoSize = true;
+            this.D4.Location = new System.Drawing.Point(159, 7);
+            this.D4.Name = "D4";
+            this.D4.Size = new System.Drawing.Size(95, 19);
+            this.D4.TabIndex = 166;
+            this.D4.TabStop = true;
+            this.D4.Text = "Dejar espacio";
+            this.D4.UseVisualStyleBackColor = true;
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.checkBox25);
-            this.groupBox10.Controls.Add(this.checkBox26);
-            this.groupBox10.Controls.Add(this.checkBox27);
+            this.groupBox10.Controls.Add(this.N3);
+            this.groupBox10.Controls.Add(this.P3);
+            this.groupBox10.Controls.Add(this.S4);
             this.groupBox10.Location = new System.Drawing.Point(198, 727);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(261, 24);
             this.groupBox10.TabIndex = 155;
             this.groupBox10.TabStop = false;
             // 
-            // checkBox25
+            // N3
             // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.Location = new System.Drawing.Point(1, 8);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(106, 19);
-            this.checkBox25.TabIndex = 122;
-            this.checkBox25.Text = "Principalmente";
-            this.checkBox25.UseVisualStyleBackColor = true;
+            this.N3.AutoSize = true;
+            this.N3.Location = new System.Drawing.Point(208, 9);
+            this.N3.Name = "N3";
+            this.N3.Size = new System.Drawing.Size(53, 19);
+            this.N3.TabIndex = 167;
+            this.N3.TabStop = true;
+            this.N3.Text = "Nada";
+            this.N3.UseVisualStyleBackColor = true;
             // 
-            // checkBox26
+            // P3
             // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.Location = new System.Drawing.Point(108, 8);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(102, 19);
-            this.checkBox26.TabIndex = 127;
-            this.checkBox26.Text = "Si es necesario";
-            this.checkBox26.UseVisualStyleBackColor = true;
+            this.P3.AutoSize = true;
+            this.P3.Location = new System.Drawing.Point(0, 7);
+            this.P3.Name = "P3";
+            this.P3.Size = new System.Drawing.Size(105, 19);
+            this.P3.TabIndex = 168;
+            this.P3.TabStop = true;
+            this.P3.Text = "Principalmente";
+            this.P3.UseVisualStyleBackColor = true;
             // 
-            // checkBox27
+            // S4
             // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.Location = new System.Drawing.Point(211, 8);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(54, 19);
-            this.checkBox27.TabIndex = 130;
-            this.checkBox27.Text = "Nada";
-            this.checkBox27.UseVisualStyleBackColor = true;
+            this.S4.AutoSize = true;
+            this.S4.Location = new System.Drawing.Point(106, 7);
+            this.S4.Name = "S4";
+            this.S4.Size = new System.Drawing.Size(101, 19);
+            this.S4.TabIndex = 169;
+            this.S4.TabStop = true;
+            this.S4.Text = "Si es necesario";
+            this.S4.UseVisualStyleBackColor = true;
+            this.S4.CheckedChanged += new System.EventHandler(this.S3_CheckedChanged);
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.checkBox20);
-            this.groupBox6.Controls.Add(this.checkBox21);
-            this.groupBox6.Controls.Add(this.checkBox22);
+            this.groupBox6.Controls.Add(this.P1);
+            this.groupBox6.Controls.Add(this.S2);
+            this.groupBox6.Controls.Add(this.N1);
             this.groupBox6.Location = new System.Drawing.Point(198, 683);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(261, 24);
             this.groupBox6.TabIndex = 156;
             this.groupBox6.TabStop = false;
             // 
-            // checkBox20
+            // P1
             // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(1, 8);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(106, 19);
-            this.checkBox20.TabIndex = 122;
-            this.checkBox20.Text = "Principalmente";
-            this.checkBox20.UseVisualStyleBackColor = true;
+            this.P1.AutoSize = true;
+            this.P1.Location = new System.Drawing.Point(0, 7);
+            this.P1.Name = "P1";
+            this.P1.Size = new System.Drawing.Size(105, 19);
+            this.P1.TabIndex = 166;
+            this.P1.TabStop = true;
+            this.P1.Text = "Principalmente";
+            this.P1.UseVisualStyleBackColor = true;
             // 
-            // checkBox21
+            // S2
             // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(108, 8);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(102, 19);
-            this.checkBox21.TabIndex = 127;
-            this.checkBox21.Text = "Si es necesario";
-            this.checkBox21.UseVisualStyleBackColor = true;
+            this.S2.AutoSize = true;
+            this.S2.Location = new System.Drawing.Point(105, 7);
+            this.S2.Name = "S2";
+            this.S2.Size = new System.Drawing.Size(101, 19);
+            this.S2.TabIndex = 167;
+            this.S2.TabStop = true;
+            this.S2.Text = "Si es necesario";
+            this.S2.UseVisualStyleBackColor = true;
             // 
-            // checkBox22
+            // N1
             // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.Location = new System.Drawing.Point(210, 8);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(54, 19);
-            this.checkBox22.TabIndex = 130;
-            this.checkBox22.Text = "Nada";
-            this.checkBox22.UseVisualStyleBackColor = true;
+            this.N1.AutoSize = true;
+            this.N1.Location = new System.Drawing.Point(208, 7);
+            this.N1.Name = "N1";
+            this.N1.Size = new System.Drawing.Size(53, 19);
+            this.N1.TabIndex = 166;
+            this.N1.TabStop = true;
+            this.N1.Text = "Nada";
+            this.N1.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.checkBox23);
-            this.groupBox9.Controls.Add(this.checkBox24);
-            this.groupBox9.Controls.Add(this.checkBox28);
+            this.groupBox9.Controls.Add(this.N2);
+            this.groupBox9.Controls.Add(this.P2);
+            this.groupBox9.Controls.Add(this.S3);
             this.groupBox9.Location = new System.Drawing.Point(199, 706);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(261, 24);
             this.groupBox9.TabIndex = 156;
             this.groupBox9.TabStop = false;
             // 
-            // checkBox23
+            // N2
             // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(1, 8);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(106, 19);
-            this.checkBox23.TabIndex = 122;
-            this.checkBox23.Text = "Principalmente";
-            this.checkBox23.UseVisualStyleBackColor = true;
+            this.N2.AutoSize = true;
+            this.N2.Location = new System.Drawing.Point(207, 5);
+            this.N2.Name = "N2";
+            this.N2.Size = new System.Drawing.Size(53, 19);
+            this.N2.TabIndex = 168;
+            this.N2.TabStop = true;
+            this.N2.Text = "Nada";
+            this.N2.UseVisualStyleBackColor = true;
             // 
-            // checkBox24
+            // P2
             // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.Location = new System.Drawing.Point(108, 8);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(102, 19);
-            this.checkBox24.TabIndex = 127;
-            this.checkBox24.Text = "Si es necesario";
-            this.checkBox24.UseVisualStyleBackColor = true;
+            this.P2.AutoSize = true;
+            this.P2.Location = new System.Drawing.Point(0, 7);
+            this.P2.Name = "P2";
+            this.P2.Size = new System.Drawing.Size(105, 19);
+            this.P2.TabIndex = 167;
+            this.P2.TabStop = true;
+            this.P2.Text = "Principalmente";
+            this.P2.UseVisualStyleBackColor = true;
             // 
-            // checkBox28
+            // S3
             // 
-            this.checkBox28.AutoSize = true;
-            this.checkBox28.Location = new System.Drawing.Point(210, 8);
-            this.checkBox28.Name = "checkBox28";
-            this.checkBox28.Size = new System.Drawing.Size(54, 19);
-            this.checkBox28.TabIndex = 130;
-            this.checkBox28.Text = "Nada";
-            this.checkBox28.UseVisualStyleBackColor = true;
+            this.S3.AutoSize = true;
+            this.S3.Location = new System.Drawing.Point(105, 6);
+            this.S3.Name = "S3";
+            this.S3.Size = new System.Drawing.Size(101, 19);
+            this.S3.TabIndex = 168;
+            this.S3.TabStop = true;
+            this.S3.Text = "Si es necesario";
+            this.S3.UseVisualStyleBackColor = true;
             // 
             // groupBox11
             // 
@@ -797,131 +876,66 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton4);
+            this.groupBox1.Controls.Add(this.M2);
+            this.groupBox1.Controls.Add(this.M1);
             this.groupBox1.Location = new System.Drawing.Point(202, 121);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(131, 22);
             this.groupBox1.TabIndex = 159;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton3
+            // M2
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(71, 5);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(66, 19);
-            this.radioButton3.TabIndex = 158;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Mejorar";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.M2.AutoSize = true;
+            this.M2.Location = new System.Drawing.Point(71, 5);
+            this.M2.Name = "M2";
+            this.M2.Size = new System.Drawing.Size(66, 19);
+            this.M2.TabIndex = 158;
+            this.M2.TabStop = true;
+            this.M2.Text = "Mejorar";
+            this.M2.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // M1
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(0, 5);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(76, 19);
-            this.radioButton4.TabIndex = 157;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Mantener";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.M1.AutoSize = true;
+            this.M1.Location = new System.Drawing.Point(0, 5);
+            this.M1.Name = "M1";
+            this.M1.Size = new System.Drawing.Size(76, 19);
+            this.M1.TabIndex = 157;
+            this.M1.TabStop = true;
+            this.M1.Text = "Mantener";
+            this.M1.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // M8
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(6, 11);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(148, 19);
-            this.radioButton5.TabIndex = 159;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Distal Incisivos laterales";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.M8.AutoSize = true;
+            this.M8.Location = new System.Drawing.Point(131, 350);
+            this.M8.Name = "M8";
+            this.M8.Size = new System.Drawing.Size(110, 19);
+            this.M8.TabIndex = 107;
+            this.M8.TabStop = true;
+            this.M8.Text = "Mover Izquierda";
+            this.M8.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // C2
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 30);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(100, 19);
-            this.radioButton6.TabIndex = 160;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Distal Caninos";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(6, 50);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(317, 19);
-            this.radioButton7.TabIndex = 161;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Stripping arcada opuesta para cerrar todos los espacios ";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(5, 75);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(60, 19);
-            this.radioButton8.TabIndex = 162;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Otros: ";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(5, 12);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(123, 19);
-            this.radioButton9.TabIndex = 104;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Mantener Superior";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(4, 47);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(105, 19);
-            this.radioButton10.TabIndex = 105;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Mover Derecha";
-            this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton11
-            // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(4, 84);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(100, 19);
-            this.radioButton11.TabIndex = 106;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Mover Inferior";
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // radioButton12
-            // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(131, 350);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(110, 19);
-            this.radioButton12.TabIndex = 107;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "Mover Izquierda";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.C2.AutoSize = true;
+            this.C2.Location = new System.Drawing.Point(186, 614);
+            this.C2.Name = "C2";
+            this.C2.Size = new System.Drawing.Size(156, 19);
+            this.C2.TabIndex = 164;
+            this.C2.TabStop = true;
+            this.C2.Text = "Cerrar todos los espacios";
+            this.C2.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(819, 934);
-            this.Controls.Add(this.radioButton12);
+            this.ClientSize = new System.Drawing.Size(819, 749);
+            this.Controls.Add(this.C2);
+            this.Controls.Add(this.M8);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox12);
@@ -999,20 +1013,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox MB1;
+        private System.Windows.Forms.CheckBox MM;
+        private System.Windows.Forms.CheckBox MM2;
+        private System.Windows.Forms.CheckBox MB2;
+        private System.Windows.Forms.CheckBox MM3;
+        private System.Windows.Forms.CheckBox MM4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox19;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -1033,20 +1045,9 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.CheckBox checkBox25;
-        private System.Windows.Forms.CheckBox checkBox26;
-        private System.Windows.Forms.CheckBox checkBox27;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.CheckBox checkBox21;
-        private System.Windows.Forms.CheckBox checkBox22;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.CheckBox checkBox23;
-        private System.Windows.Forms.CheckBox checkBox24;
-        private System.Windows.Forms.CheckBox checkBox28;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.CheckBox checkBox29;
         private System.Windows.Forms.CheckBox checkBox30;
@@ -1056,18 +1057,31 @@
         private System.Windows.Forms.CheckBox checkBox35;
         private System.Windows.Forms.CheckBox checkBox36;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton M3;
+        private System.Windows.Forms.RadioButton M4;
+        private System.Windows.Forms.RadioButton M7;
+        private System.Windows.Forms.RadioButton M6;
+        private System.Windows.Forms.RadioButton M5;
+        private System.Windows.Forms.RadioButton O1;
+        private System.Windows.Forms.RadioButton S1;
+        private System.Windows.Forms.RadioButton D2;
+        private System.Windows.Forms.RadioButton D1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton M2;
+        private System.Windows.Forms.RadioButton M1;
+        private System.Windows.Forms.RadioButton M8;
+        private System.Windows.Forms.RadioButton D3;
+        private System.Windows.Forms.RadioButton C1;
+        private System.Windows.Forms.RadioButton D4;
+        private System.Windows.Forms.RadioButton P3;
+        private System.Windows.Forms.RadioButton P1;
+        private System.Windows.Forms.RadioButton P2;
+        private System.Windows.Forms.RadioButton C2;
+        private System.Windows.Forms.RadioButton S2;
+        private System.Windows.Forms.RadioButton S3;
+        private System.Windows.Forms.RadioButton S4;
+        private System.Windows.Forms.RadioButton N1;
+        private System.Windows.Forms.RadioButton N3;
+        private System.Windows.Forms.RadioButton N2;
     }
 }

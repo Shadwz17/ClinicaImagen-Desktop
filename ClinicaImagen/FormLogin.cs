@@ -31,19 +31,19 @@ namespace ClinicaImagen
             informacion.correoLogin = txtUser.Text;
             var correo_form = txtUser.Text;
             var passwd_form = txtPasswd.Text;
-            var loginQuery = new MySqlCommand($"SELECT nombre, verificado, cargo FROM usuarios WHERE correo =\"{correo_form}\" AND passwd=\"{passwd_form}\"", connection);
+            var loginQuery = new MySqlCommand($"SELECT cargo FROM usuarios WHERE email =\"{correo_form}\" AND passwd=\"{passwd_form}\"", connection);
             var reader = loginQuery.ExecuteReader();
             reader.Read();
 
-            if (reader.HasRows && Boolean.Parse(reader["cargo"].ToString()) == true)
+            if ((reader.HasRows && reader["cargo"].ToString() == "Asesor"))
             {
                 Paneladmin paneladmin = new Paneladmin();
                 this.Hide();
                 paneladmin.Show();
             }
-            else if (reader.HasRows && Boolean.Parse(reader["verificado"].ToString()) == true)
+            else if (reader.HasRows && reader["cargo"].ToString() == "Doctor")
             {
-                Form4 form4 = new Form4();
+                PanelDoctor form4 = new PanelDoctor();
                 this.Hide();
                 form4.Show();
             }
@@ -74,6 +74,11 @@ namespace ClinicaImagen
         private void FormLogin_Load(object sender, EventArgs e)
         {
          
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

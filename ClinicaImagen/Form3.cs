@@ -28,7 +28,7 @@ namespace ClinicaImagen
         {
             string text = "Formulario Enviado";
             MessageBox.Show(text);
-            Form4 form4 = new Form4();
+            PanelDoctor form4 = new PanelDoctor();
             this.Hide();
             form4.Show();
         }

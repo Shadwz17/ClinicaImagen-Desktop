@@ -90,5 +90,10 @@ namespace ClinicaImagen
         {
 
         }
+
+        private void S3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
