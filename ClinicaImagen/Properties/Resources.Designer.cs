@@ -73,6 +73,16 @@ namespace ClinicaImagen.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3592870_brochure_document_menu_note_office_icon {
+            get {
+                object obj = ResourceManager.GetObject("3592870_brochure_document_menu_note_office_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sin_título_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Sin_título-removebg-preview", resourceCulture);

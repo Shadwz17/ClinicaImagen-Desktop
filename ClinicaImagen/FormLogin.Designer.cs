@@ -38,6 +38,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             this.Correo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Correo.AutoSize = true;
-            this.Correo.Location = new System.Drawing.Point(149, 208);
+            this.Correo.Location = new System.Drawing.Point(173, 225);
             this.Correo.Name = "Correo";
             this.Correo.Size = new System.Drawing.Size(45, 15);
             this.Correo.TabIndex = 4;
@@ -54,7 +55,7 @@
             // txtPasswd
             // 
             this.txtPasswd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPasswd.Location = new System.Drawing.Point(149, 279);
+            this.txtPasswd.Location = new System.Drawing.Point(173, 296);
             this.txtPasswd.Name = "txtPasswd";
             this.txtPasswd.PasswordChar = '*';
             this.txtPasswd.Size = new System.Drawing.Size(110, 24);
@@ -64,7 +65,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(149, 261);
+            this.label1.Location = new System.Drawing.Point(173, 278);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 15);
             this.label1.TabIndex = 5;
@@ -73,7 +74,7 @@
             // txtUser
             // 
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUser.Location = new System.Drawing.Point(149, 226);
+            this.txtUser.Location = new System.Drawing.Point(173, 243);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(110, 24);
             this.txtUser.TabIndex = 2;
@@ -81,7 +82,7 @@
             // btnRegistro
             // 
             this.btnRegistro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistro.Location = new System.Drawing.Point(149, 364);
+            this.btnRegistro.Location = new System.Drawing.Point(173, 381);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(110, 23);
             this.btnRegistro.TabIndex = 1;
@@ -95,7 +96,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(188, 102);
+            this.label2.Location = new System.Drawing.Point(212, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 50);
             this.label2.TabIndex = 7;
@@ -104,7 +105,7 @@
             // btnLogin
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogin.Location = new System.Drawing.Point(149, 320);
+            this.btnLogin.Location = new System.Drawing.Point(173, 337);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(110, 23);
             this.btnLogin.TabIndex = 0;
@@ -118,7 +119,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(203, 54);
+            this.label3.Location = new System.Drawing.Point(227, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 30);
             this.label3.TabIndex = 18;
@@ -130,7 +131,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(27, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -138,13 +139,31 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnVolver.Image = global::ClinicaImagen.Properties.Resources._3592870_brochure_document_menu_note_office_icon;
+            this.btnVolver.Location = new System.Drawing.Point(381, 418);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(59, 52);
+            this.btnVolver.TabIndex = 93;
+            this.btnVolver.Text = " ";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(403, 439);
+            this.ClientSize = new System.Drawing.Size(451, 473);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnLogin);
@@ -178,5 +197,6 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
