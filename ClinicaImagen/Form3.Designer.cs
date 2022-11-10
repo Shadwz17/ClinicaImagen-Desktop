@@ -201,6 +201,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -227,8 +228,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::ClinicaImagen.Properties.Resources.Sin_título_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(127, -81);
+            this.pictureBox1.Location = new System.Drawing.Point(271, -57);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(528, 163);
             this.pictureBox1.TabIndex = 5;
@@ -241,7 +243,7 @@
             this.btnVolver.FlatAppearance.BorderSize = 0;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnVolver.Location = new System.Drawing.Point(-4, -2);
+            this.btnVolver.Location = new System.Drawing.Point(-4, -58);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(35, 24);
@@ -252,7 +254,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1376, 1614);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Location = new System.Drawing.Point(553, 1627);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 94;
@@ -262,9 +265,10 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(37, 1360);
+            this.label4.Location = new System.Drawing.Point(275, 1302);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 21);
             this.label4.TabIndex = 95;
@@ -272,9 +276,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(37, 1413);
+            this.label1.Location = new System.Drawing.Point(275, 1355);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 21);
             this.label1.TabIndex = 97;
@@ -282,9 +287,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(37, 1381);
+            this.label2.Location = new System.Drawing.Point(275, 1323);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 21);
             this.label2.TabIndex = 98;
@@ -292,9 +298,10 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(37, 1446);
+            this.label3.Location = new System.Drawing.Point(277, 1381);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 21);
             this.label3.TabIndex = 99;
@@ -303,9 +310,10 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(18, 1484);
+            this.label5.Location = new System.Drawing.Point(127, 1420);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(233, 21);
             this.label5.TabIndex = 112;
@@ -313,9 +321,10 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(16, 1516);
+            this.label6.Location = new System.Drawing.Point(125, 1452);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(882, 21);
             this.label6.TabIndex = 115;
@@ -325,7 +334,8 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(40, 1557);
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox1.Location = new System.Drawing.Point(149, 1493);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(851, 23);
             this.textBox1.TabIndex = 116;
@@ -333,9 +343,10 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(12, 1609);
+            this.label7.Location = new System.Drawing.Point(121, 1545);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(980, 21);
             this.label7.TabIndex = 117;
@@ -345,7 +356,8 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(37, 1641);
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox2.Location = new System.Drawing.Point(146, 1577);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(851, 23);
             this.textBox2.TabIndex = 118;
@@ -353,9 +365,10 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox4.Controls.Add(this.M2);
             this.groupBox4.Controls.Add(this.M1);
-            this.groupBox4.Location = new System.Drawing.Point(244, 1487);
+            this.groupBox4.Location = new System.Drawing.Point(353, 1423);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(148, 18);
             this.groupBox4.TabIndex = 122;
@@ -385,10 +398,11 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox9.Controls.Add(this.N2);
             this.groupBox9.Controls.Add(this.P2);
             this.groupBox9.Controls.Add(this.S2);
-            this.groupBox9.Location = new System.Drawing.Point(117, 1410);
+            this.groupBox9.Location = new System.Drawing.Point(355, 1352);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(261, 24);
             this.groupBox9.TabIndex = 159;
@@ -429,10 +443,11 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox6.Controls.Add(this.P1);
             this.groupBox6.Controls.Add(this.S1);
             this.groupBox6.Controls.Add(this.N1);
-            this.groupBox6.Location = new System.Drawing.Point(116, 1378);
+            this.groupBox6.Location = new System.Drawing.Point(354, 1320);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(261, 24);
             this.groupBox6.TabIndex = 158;
@@ -473,10 +488,11 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox10.Controls.Add(this.N3);
             this.groupBox10.Controls.Add(this.P3);
             this.groupBox10.Controls.Add(this.S3);
-            this.groupBox10.Location = new System.Drawing.Point(117, 1443);
+            this.groupBox10.Location = new System.Drawing.Point(357, 1378);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(261, 24);
             this.groupBox10.TabIndex = 157;
@@ -517,10 +533,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Location = new System.Drawing.Point(109, 1304);
+            this.groupBox1.Location = new System.Drawing.Point(347, 1246);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(261, 24);
             this.groupBox1.TabIndex = 166;
@@ -561,10 +578,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.Controls.Add(this.radioButton4);
             this.groupBox2.Controls.Add(this.radioButton5);
             this.groupBox2.Controls.Add(this.radioButton6);
-            this.groupBox2.Location = new System.Drawing.Point(108, 1281);
+            this.groupBox2.Location = new System.Drawing.Point(346, 1223);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(261, 24);
             this.groupBox2.TabIndex = 167;
@@ -605,10 +623,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.Controls.Add(this.radioButton7);
             this.groupBox3.Controls.Add(this.radioButton8);
             this.groupBox3.Controls.Add(this.S4);
-            this.groupBox3.Location = new System.Drawing.Point(108, 1325);
+            this.groupBox3.Location = new System.Drawing.Point(346, 1267);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(261, 24);
             this.groupBox3.TabIndex = 165;
@@ -649,9 +668,10 @@
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(39, 1330);
+            this.label15.Location = new System.Drawing.Point(277, 1272);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 19);
             this.label15.TabIndex = 164;
@@ -659,9 +679,10 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(39, 1309);
+            this.label14.Location = new System.Drawing.Point(277, 1251);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 19);
             this.label14.TabIndex = 163;
@@ -669,9 +690,10 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(39, 1288);
+            this.label13.Location = new System.Drawing.Point(277, 1230);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 19);
             this.label13.TabIndex = 162;
@@ -679,9 +701,10 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(39, 1267);
+            this.label12.Location = new System.Drawing.Point(277, 1209);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(66, 19);
             this.label12.TabIndex = 161;
@@ -689,9 +712,10 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(37, 1237);
+            this.label11.Location = new System.Drawing.Point(275, 1179);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(115, 21);
             this.label11.TabIndex = 160;
@@ -699,8 +723,9 @@
             // 
             // C2
             // 
+            this.C2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C2.AutoSize = true;
-            this.C2.Location = new System.Drawing.Point(96, 1208);
+            this.C2.Location = new System.Drawing.Point(334, 1150);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(156, 19);
             this.C2.TabIndex = 174;
@@ -710,8 +735,9 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox8.Controls.Add(this.D4);
-            this.groupBox8.Location = new System.Drawing.Point(97, 1200);
+            this.groupBox8.Location = new System.Drawing.Point(335, 1142);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(257, 26);
             this.groupBox8.TabIndex = 173;
@@ -730,9 +756,10 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox5.Controls.Add(this.D3);
             this.groupBox5.Controls.Add(this.C1);
-            this.groupBox5.Location = new System.Drawing.Point(100, 1170);
+            this.groupBox5.Location = new System.Drawing.Point(338, 1112);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(257, 26);
             this.groupBox5.TabIndex = 172;
@@ -762,9 +789,10 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(39, 1207);
+            this.label10.Location = new System.Drawing.Point(277, 1149);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 19);
             this.label10.TabIndex = 171;
@@ -772,9 +800,10 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(36, 1175);
+            this.label9.Location = new System.Drawing.Point(274, 1117);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 19);
             this.label9.TabIndex = 170;
@@ -782,9 +811,10 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(39, 1153);
+            this.label8.Location = new System.Drawing.Point(277, 1095);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 21);
             this.label8.TabIndex = 169;
@@ -792,9 +822,10 @@
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(12, 1113);
+            this.label16.Location = new System.Drawing.Point(250, 1055);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(276, 21);
             this.label16.TabIndex = 168;
@@ -802,12 +833,13 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox7.Controls.Add(this.O1);
             this.groupBox7.Controls.Add(this.radioButton9);
             this.groupBox7.Controls.Add(this.D2);
             this.groupBox7.Controls.Add(this.textBox3);
             this.groupBox7.Controls.Add(this.D1);
-            this.groupBox7.Location = new System.Drawing.Point(25, 1010);
+            this.groupBox7.Location = new System.Drawing.Point(271, 958);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(438, 100);
             this.groupBox7.TabIndex = 177;
@@ -866,9 +898,10 @@
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(22, 986);
+            this.label17.Location = new System.Drawing.Point(268, 934);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(392, 21);
             this.label17.TabIndex = 176;
@@ -876,9 +909,10 @@
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(16, 965);
+            this.label18.Location = new System.Drawing.Point(262, 913);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(247, 21);
             this.label18.TabIndex = 175;
@@ -886,8 +920,9 @@
             // 
             // M8
             // 
+            this.M8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.M8.AutoSize = true;
-            this.M8.Location = new System.Drawing.Point(34, 939);
+            this.M8.Location = new System.Drawing.Point(282, 879);
             this.M8.Name = "M8";
             this.M8.Size = new System.Drawing.Size(110, 19);
             this.M8.TabIndex = 179;
@@ -897,6 +932,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox11.Controls.Add(this.M7);
             this.groupBox11.Controls.Add(this.M6);
             this.groupBox11.Controls.Add(this.M5);
@@ -906,7 +942,7 @@
             this.groupBox11.Controls.Add(this.MB2);
             this.groupBox11.Controls.Add(this.MM3);
             this.groupBox11.Controls.Add(this.MM4);
-            this.groupBox11.Location = new System.Drawing.Point(30, 818);
+            this.groupBox11.Location = new System.Drawing.Point(278, 758);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(379, 138);
             this.groupBox11.TabIndex = 180;
@@ -1007,9 +1043,10 @@
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(16, 794);
+            this.label19.Location = new System.Drawing.Point(258, 734);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(522, 21);
             this.label19.TabIndex = 178;
@@ -1017,9 +1054,10 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox12.Controls.Add(this.M4);
             this.groupBox12.Controls.Add(this.M3);
-            this.groupBox12.Location = new System.Drawing.Point(157, 759);
+            this.groupBox12.Location = new System.Drawing.Point(405, 706);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(131, 22);
             this.groupBox12.TabIndex = 182;
@@ -1049,9 +1087,10 @@
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(12, 761);
+            this.label20.Location = new System.Drawing.Point(260, 708);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(143, 21);
             this.label20.TabIndex = 181;
@@ -1059,9 +1098,10 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox13.Controls.Add(this.radioButton10);
             this.groupBox13.Controls.Add(this.radioButton11);
-            this.groupBox13.Location = new System.Drawing.Point(101, 738);
+            this.groupBox13.Location = new System.Drawing.Point(349, 678);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(131, 22);
             this.groupBox13.TabIndex = 185;
@@ -1091,9 +1131,10 @@
             // 
             // label21
             // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(230, 747);
+            this.label21.Location = new System.Drawing.Point(478, 687);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(223, 13);
             this.label21.TabIndex = 184;
@@ -1101,9 +1142,10 @@
             // 
             // label22
             // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label22.Location = new System.Drawing.Point(12, 740);
+            this.label22.Location = new System.Drawing.Point(260, 680);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(90, 21);
             this.label22.TabIndex = 183;
@@ -1111,10 +1153,10 @@
             // 
             // groupBox14
             // 
-            this.groupBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox14.Controls.Add(this.radioButton12);
             this.groupBox14.Controls.Add(this.radioButton13);
-            this.groupBox14.Location = new System.Drawing.Point(40, 512);
+            this.groupBox14.Location = new System.Drawing.Point(260, 471);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(511, 43);
             this.groupBox14.TabIndex = 188;
@@ -1145,7 +1187,7 @@
             // 
             // groupBox15
             // 
-            this.groupBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox15.Controls.Add(this.CBB17);
             this.groupBox15.Controls.Add(this.CBB1);
             this.groupBox15.Controls.Add(this.CBB18);
@@ -1179,7 +1221,7 @@
             this.groupBox15.Controls.Add(this.CBB11);
             this.groupBox15.Controls.Add(this.CBB12);
             this.groupBox15.Controls.Add(this.pictureBox3);
-            this.groupBox15.Location = new System.Drawing.Point(138, 568);
+            this.groupBox15.Location = new System.Drawing.Point(358, 513);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(342, 164);
             this.groupBox15.TabIndex = 187;
@@ -1486,10 +1528,10 @@
             // 
             // label23
             // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(1, 488);
+            this.label23.Location = new System.Drawing.Point(221, 447);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(91, 21);
             this.label23.TabIndex = 186;
@@ -1497,10 +1539,10 @@
             // 
             // groupBox16
             // 
-            this.groupBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox16.Controls.Add(this.radioButton14);
             this.groupBox16.Controls.Add(this.radioButton15);
-            this.groupBox16.Location = new System.Drawing.Point(43, 267);
+            this.groupBox16.Location = new System.Drawing.Point(263, 226);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(594, 40);
             this.groupBox16.TabIndex = 199;
@@ -1531,7 +1573,7 @@
             // 
             // groupBox17
             // 
-            this.groupBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox17.Controls.Add(this.CB17);
             this.groupBox17.Controls.Add(this.CB1);
             this.groupBox17.Controls.Add(this.CB18);
@@ -1565,7 +1607,7 @@
             this.groupBox17.Controls.Add(this.CB11);
             this.groupBox17.Controls.Add(this.CB12);
             this.groupBox17.Controls.Add(this.pictureBox2);
-            this.groupBox17.Location = new System.Drawing.Point(145, 332);
+            this.groupBox17.Location = new System.Drawing.Point(365, 291);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(342, 164);
             this.groupBox17.TabIndex = 198;
@@ -1872,10 +1914,10 @@
             // 
             // groupBox18
             // 
-            this.groupBox18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox18.Controls.Add(this.M);
             this.groupBox18.Controls.Add(this.F);
-            this.groupBox18.Location = new System.Drawing.Point(136, 154);
+            this.groupBox18.Location = new System.Drawing.Point(338, 140);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(69, 18);
             this.groupBox18.TabIndex = 197;
@@ -1905,11 +1947,11 @@
             // 
             // groupBox19
             // 
-            this.groupBox19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox19.Controls.Add(this.radioButton16);
             this.groupBox19.Controls.Add(this.radioButton17);
             this.groupBox19.Controls.Add(this.A1);
-            this.groupBox19.Location = new System.Drawing.Point(193, 210);
+            this.groupBox19.Location = new System.Drawing.Point(413, 169);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(271, 19);
             this.groupBox19.TabIndex = 196;
@@ -1950,10 +1992,10 @@
             // 
             // label24
             // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(8, 243);
+            this.label24.Location = new System.Drawing.Point(228, 202);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(407, 21);
             this.label24.TabIndex = 195;
@@ -1961,10 +2003,10 @@
             // 
             // label25
             // 
-            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(8, 204);
+            this.label25.Location = new System.Drawing.Point(228, 163);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(184, 21);
             this.label25.TabIndex = 194;
@@ -1972,10 +2014,10 @@
             // 
             // label26
             // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(217, 149);
+            this.label26.Location = new System.Drawing.Point(419, 135);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(164, 21);
             this.label26.TabIndex = 193;
@@ -1983,18 +2025,18 @@
             // 
             // textBox4
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(380, 149);
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox4.Location = new System.Drawing.Point(582, 135);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(193, 23);
             this.textBox4.TabIndex = 192;
             // 
             // label27
             // 
-            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(90, 149);
+            this.label27.Location = new System.Drawing.Point(292, 135);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(50, 21);
             this.label27.TabIndex = 191;
@@ -2002,30 +2044,41 @@
             // 
             // textBox5
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(332, 123);
+            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox5.Location = new System.Drawing.Point(534, 109);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(193, 23);
             this.textBox5.TabIndex = 190;
             // 
             // label28
             // 
-            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(152, 123);
+            this.label28.Location = new System.Drawing.Point(354, 109);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(169, 21);
             this.label28.TabIndex = 189;
             this.label28.Text = "Nombre del paciente:";
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label29.Location = new System.Drawing.Point(762, 1687);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(12, 15);
+            this.label29.TabIndex = 200;
+            this.label29.Text = "-";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1115, 1061);
+            this.ClientSize = new System.Drawing.Size(1365, 1061);
+            this.Controls.Add(this.label29);
             this.Controls.Add(this.groupBox16);
             this.Controls.Add(this.groupBox17);
             this.Controls.Add(this.groupBox18);
@@ -2307,5 +2360,7 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label29;
     }
 }

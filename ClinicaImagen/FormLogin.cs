@@ -26,7 +26,7 @@ namespace ClinicaImagen
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection(MainBD.connString);
+            MySqlConnection connection = new MySqlConnection(MainFunc.connString);
             connection.Open();
             informacion.correoLogin = txtUser.Text;
             var correo_form = txtUser.Text;
