@@ -32,7 +32,7 @@ namespace ClinicaImagen
         
         private void datosUsuario()
         {
-            using (MySqlConnection connection = new MySqlConnection(MainBD.connString))
+            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
             {
                 using (MySqlCommand cmd = new MySqlCommand($"SELECT correo, nombre from usuarios WHERE correo=\"{FormLogin.informacion.correoLogin}\"", connection))
                 {
@@ -51,7 +51,7 @@ namespace ClinicaImagen
         private DataTable usuariosVerificados()
         {
             DataTable usuarios = new DataTable();
-            using (MySqlConnection connection =  new MySqlConnection(MainBD.connString))
+            using (MySqlConnection connection =  new MySqlConnection(MainFunc.connString))
             {
                 using (MySqlCommand cmd = new MySqlCommand("SELECT correo, passwd, nombre from usuarios WHERE verificado=1 AND cargo=\"Asesor\"", connection))
                 {
@@ -67,7 +67,7 @@ namespace ClinicaImagen
         private DataTable usuariosNoVerificados()
         {
             DataTable usuarios = new DataTable();
-            using (MySqlConnection connection = new MySqlConnection(MainBD.connString))
+            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
             {
                 using (MySqlCommand cmd = new MySqlCommand("SELECT correo, passwd, nombre from usuarios WHERE verificado=0", connection))
                 {
@@ -111,7 +111,7 @@ namespace ClinicaImagen
                 correo = Interaction.InputBox("Ingrese el correo a verificar: ", "Verificador");
 
 
-                using (MySqlConnection connection = new MySqlConnection(MainBD.connString))
+                using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
                 {
                     using (MySqlCommand verificarQuery = new MySqlCommand($"UPDATE usuarios SET verificado=1 WHERE email=\"{correo}\";", connection))
                     {
@@ -133,12 +133,14 @@ namespace ClinicaImagen
             string correo;
             correo = Interaction.InputBox("Correo a resetear: ", "Clinica Imagen - Admin");
 
-            using (MySqlConnection connection = new MySqlConnection(MainBD.connString))
+            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
             {
                 using (MySqlCommand verificarQuery = new MySqlCommand($"UPDATE usuarios SET passwd=\"CICliente\" WHERE correo=\"{correo}\";", connection))
                 {
                     connection.Open();
                     MySqlDataReader reader = verificarQuery.ExecuteReader();
+                    MainFunc.Email(correo, "Reseteo de contraseña - FZALA",
+                        "Su contrseña fue restablecida.<br>Contraseña nueva: CICliente<br><br>Saludos cordiales,<br>FZALA<br>Para alguna otra consulta inserte email de asesor");
                     MessageBox.Show("La contraseña por defecto es CICliente", "Clinica Imagen - Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

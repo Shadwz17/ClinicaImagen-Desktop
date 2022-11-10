@@ -291,7 +291,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(125, 550);
+            this.label8.Location = new System.Drawing.Point(129, 559);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 21);
             this.label8.TabIndex = 112;
@@ -933,7 +933,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(819, 749);
+            this.ClientSize = new System.Drawing.Size(888, 862);
             this.Controls.Add(this.C2);
             this.Controls.Add(this.M8);
             this.Controls.Add(this.groupBox1);

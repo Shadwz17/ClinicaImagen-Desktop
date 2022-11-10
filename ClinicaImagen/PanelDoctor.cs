@@ -21,14 +21,14 @@ namespace ClinicaImagen
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Form3 form3 = new Form3();
             this.Hide();
-            form1.Show();
+            form3.Show();
         }
 
         void Pacientes()
         {
-            using (MySqlConnection connection = new MySqlConnection(MainBD.connString))
+            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
             {
                 using (MySqlCommand cmd = new MySqlCommand($"SELECT nombre, direccion, telefono FROM paciente WHERE idD=\"{FormLogin.informacion.correoLogin}\"", connection))
                 {

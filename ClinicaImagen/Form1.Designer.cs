@@ -146,7 +146,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(228, 123);
+            this.label1.Location = new System.Drawing.Point(228, 169);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 21);
             this.label1.TabIndex = 2;
@@ -155,7 +155,7 @@
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(408, 123);
+            this.textBox1.Location = new System.Drawing.Point(408, 169);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(193, 23);
             this.textBox1.TabIndex = 3;
@@ -164,7 +164,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::ClinicaImagen.Properties.Resources.Sin_título_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(130, -46);
+            this.pictureBox1.Location = new System.Drawing.Point(130, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(528, 163);
             this.pictureBox1.TabIndex = 4;
@@ -175,7 +175,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(166, 149);
+            this.label2.Location = new System.Drawing.Point(166, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 21);
             this.label2.TabIndex = 5;
@@ -185,7 +185,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(456, 149);
+            this.textBox2.Location = new System.Drawing.Point(456, 195);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(193, 23);
             this.textBox2.TabIndex = 6;
@@ -195,7 +195,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(293, 149);
+            this.label3.Location = new System.Drawing.Point(293, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(164, 21);
             this.label3.TabIndex = 8;
@@ -206,7 +206,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(84, 204);
+            this.label4.Location = new System.Drawing.Point(84, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 21);
             this.label4.TabIndex = 10;
@@ -217,7 +217,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(84, 243);
+            this.label5.Location = new System.Drawing.Point(84, 289);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(407, 21);
             this.label5.TabIndex = 13;
@@ -528,7 +528,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(72, 515);
+            this.label6.Location = new System.Drawing.Point(72, 561);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 21);
             this.label6.TabIndex = 83;
@@ -540,7 +540,7 @@
             this.groupBox1.Controls.Add(this.S2);
             this.groupBox1.Controls.Add(this.S1);
             this.groupBox1.Controls.Add(this.A1);
-            this.groupBox1.Location = new System.Drawing.Point(269, 210);
+            this.groupBox1.Location = new System.Drawing.Point(269, 256);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(271, 19);
             this.groupBox1.TabIndex = 86;
@@ -584,7 +584,7 @@
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.M);
             this.groupBox2.Controls.Add(this.F);
-            this.groupBox2.Location = new System.Drawing.Point(212, 154);
+            this.groupBox2.Location = new System.Drawing.Point(212, 200);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(69, 18);
             this.groupBox2.TabIndex = 87;
@@ -648,7 +648,7 @@
             this.groupBox3.Controls.Add(this.CB11);
             this.groupBox3.Controls.Add(this.CB12);
             this.groupBox3.Controls.Add(this.pictureBox2);
-            this.groupBox3.Location = new System.Drawing.Point(221, 332);
+            this.groupBox3.Location = new System.Drawing.Point(221, 378);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(342, 164);
             this.groupBox3.TabIndex = 88;
@@ -691,7 +691,7 @@
             this.groupBox4.Controls.Add(this.CBB11);
             this.groupBox4.Controls.Add(this.CBB12);
             this.groupBox4.Controls.Add(this.pictureBox3);
-            this.groupBox4.Location = new System.Drawing.Point(222, 614);
+            this.groupBox4.Location = new System.Drawing.Point(222, 660);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(342, 164);
             this.groupBox4.TabIndex = 89;
@@ -1002,7 +1002,7 @@
             this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox5.Controls.Add(this.D1);
             this.groupBox5.Controls.Add(this.N1);
-            this.groupBox5.Location = new System.Drawing.Point(119, 267);
+            this.groupBox5.Location = new System.Drawing.Point(119, 313);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(594, 40);
             this.groupBox5.TabIndex = 90;
@@ -1036,7 +1036,7 @@
             this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox6.Controls.Add(this.N2);
             this.groupBox6.Controls.Add(this.C1);
-            this.groupBox6.Location = new System.Drawing.Point(111, 539);
+            this.groupBox6.Location = new System.Drawing.Point(111, 585);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(511, 43);
             this.groupBox6.TabIndex = 91;
@@ -1070,7 +1070,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(811, 749);
+            this.ClientSize = new System.Drawing.Size(811, 840);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);

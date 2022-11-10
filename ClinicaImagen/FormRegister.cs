@@ -20,7 +20,7 @@ namespace ClinicaImagen
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection(MainBD.connString);
+            MySqlConnection connection = new MySqlConnection(MainFunc.connString);
             string nombre = txtNombre.Text;
             string correo = txtCorreo.Text;
             string passwd = txtPwd.Text;
@@ -37,6 +37,12 @@ namespace ClinicaImagen
             else
             {
                 reader.Close();
+                MainFunc.Email(correo, "Registro de Usuario - FZALA",
+                    "Su registro fue enviado con exito<br>Un asesor lo atendera en brevedad<br><br>Saludos cordiales,<br>FZALA");
+                MainFunc.Email(MainFunc.correoAdmin, "Registro de Usuario - FZALA",
+                    $"El Usuario {nombre} con email: {correo}. Se ha registrado.<br><br>Mensaje de Sistema automatizado de FZALA");
+
+
                 var registerQuery = new MySqlCommand($"INSERT INTO usuarios (nombre, correo, passwd) VALUES (\"{nombre}\", \"{correo}\", \"{passwd}\")", connection);
                 registerQuery.ExecuteNonQuery();
                 MessageBox.Show("Usuario registrado correctamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
