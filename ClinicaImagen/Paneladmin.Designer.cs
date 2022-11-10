@@ -39,6 +39,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.btnResetearPwd = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgVerificados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgNoVerificados)).BeginInit();
             this.SuspendLayout();
@@ -163,12 +164,25 @@
             this.btnResetearPwd.UseVisualStyleBackColor = false;
             this.btnResetearPwd.Click += new System.EventHandler(this.btnActualizarContraseña_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.GreenYellow;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.Location = new System.Drawing.Point(808, 257);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 47);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Verificar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Paneladmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(992, 508);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnResetearPwd);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblUsuario);
@@ -203,5 +217,6 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Button btnResetearPwd;
+        private System.Windows.Forms.Button button1;
     }
 }
