@@ -90,9 +90,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(28, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 15);
+            this.label1.Size = new System.Drawing.Size(111, 15);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Nombre de Usuario:";
+            this.label1.Text = "Nombre Completo:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2

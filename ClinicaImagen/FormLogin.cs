@@ -21,7 +21,7 @@ namespace ClinicaImagen
 
         public static class informacion
         {
-            public static string correoLogin { get; set; }
+            public static string? correoLogin { get; set; }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
