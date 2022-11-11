@@ -79,43 +79,40 @@ namespace ClinicaImagen
             {
                 form.Fields[9].Value = "1";
                 //Dientes
-             form.Fields[11].Value = CB1.Checked.ToString();
-                form.Fields[12].Value = CB2.Checked.ToString();
-                form.Fields[13].Value = CB3.Checked.ToString();
-                form.Fields[14].Value = CB4.Checked.ToString();
-                form.Fields[15].Value = CB5.Checked.ToString();
-                form.Fields[16].Value = CB6.Checked.ToString();
-                form.Fields[17].Value = CB7.Checked.ToString();
-                form.Fields[18].Value = CB8.Checked.ToString();
-                form.Fields[19].Value = CB9.Checked.ToString();
-                form.Fields[20].Value = CB10.Checked.ToString();
-                form.Fields[21].Value = CB11.Checked.ToString();
-                form.Fields[22].Value = CB12.Checked.ToString();
-                form.Fields[23].Value = CB13.Checked.ToString();
-                form.Fields[24].Value = CB14.Checked.ToString();
-                form.Fields[25].Value = CB15.Checked.ToString();
-                form.Fields[26].Value = CB16.Checked.ToString();
-                form.Fields[27].Value = CB17.Checked.ToString();
-                form.Fields[28].Value = CB18.Checked.ToString();
-                form.Fields[29].Value = CB19.Checked.ToString();
-                form.Fields[30].Value = CB20.Checked.ToString();
-                form.Fields[31].Value = CB21.Checked.ToString();
-                form.Fields[32].Value = CB22.Checked.ToString();
-                form.Fields[33].Value = CB23.Checked.ToString();
-                form.Fields[34].Value = CB24.Checked.ToString();
-                form.Fields[35].Value = CB25.Checked.ToString();
-                form.Fields[36].Value = CB26.Checked.ToString();
-                form.Fields[37].Value = CB27.Checked.ToString();
-                form.Fields[38].Value = CB28.Checked.ToString();
-                form.Fields[39].Value = CB29.Checked.ToString();
-                form.Fields[40].Value = CB30.Checked.ToString();
-                form.Fields[41].Value = CB31.Checked.ToString();
-                form.Fields[42].Value = CB32.Checked.ToString();
+                bool[] listaDientes_1 = new bool[groupBox17.Controls.Count];
 
+
+
+
+                MessageBox.Show(listaDientes_1.Length.ToString());
+
+                for (int i = 0; i < listaDientes_1.Length; i++)
+                {
+                    foreach (Control c in groupBox17.Controls)
+                    {
+                        if ((c is CheckBox) && ((CheckBox)c).Checked)
+                        {
+                            listaDientes_1[i] = true;
+                        }
+                        else if ((c is CheckBox) && !((CheckBox)c).Checked)
+                        {
+                            listaDientes_1[i] = false;
+                        }
+                    }
+                }
+
+                for (int i = 10; i < 41; i++)
+                {
+                    for (int n = 0; i < listaDientes_1.Length; i++)
+                    {
+                        MessageBox.Show(listaDientes_1[n].ToString());
+                        form.Fields[i].Value = listaDientes_1[n].ToString();
+                    }
+                }
             }
             form.Fields[42].Value = "0";
             form.Fields[43].Value = "1";
-             
+
 
             doc.SaveAs($@"C:\Users\fedec\Desktop\Test\formulario-{txtPaciente.Text}-{DateTime.Today.ToString("dd-mm-yyyyy")}.pdf");
         }
