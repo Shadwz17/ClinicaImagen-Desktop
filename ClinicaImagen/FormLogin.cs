@@ -31,7 +31,7 @@ namespace ClinicaImagen
             informacion.correoLogin = txtUser.Text;
             var correo_form = txtUser.Text;
             var passwd_form = txtPasswd.Text;
-            var loginQuery = new MySqlCommand($"SELECT cargo FROM usuarios WHERE correo =\"{correo_form}\" AND passwd=\"{passwd_form}\"", connection);
+            var loginQuery = new MySqlCommand($"SELECT cargo FROM usuarios WHERE correo=\"{correo_form}\" AND passwd=\"{passwd_form}\"", connection);
             var reader = loginQuery.ExecuteReader();
             reader.Read();
 

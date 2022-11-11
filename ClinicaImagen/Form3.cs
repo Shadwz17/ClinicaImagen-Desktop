@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,8 +37,12 @@ namespace ClinicaImagen
             var loginQuery = new MySqlCommand($"SELECT nombre FROM usuarios WHERE correo =\"{informacion.correoLogin}\"", connection);
             var reader = loginQuery.ExecuteReader();
             reader.Read();
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
 
-            PdfDocument doc = PdfDocument.FromFile(@"C:\Users\fedec\Desktop\Test\rellenable.pdf");
+            MessageBox.Show(projectDirectory);
+
+            PdfDocument doc = PdfDocument.FromFile(projectDirectory + "\\Files\\template-pdf.pdf");
             var form = doc.Form;
 
 
@@ -49,13 +54,13 @@ namespace ClinicaImagen
             {
                 form.Fields[2].Value = "1";
             }
-            else
+            else if (F.Checked)
             {
-                form.Fields[3].Value = "1";
+                form.Fields[4].Value = "1";
             }
 
-
-            form.Fields[4].Value = datePicker.Text;
+            MessageBox.Show(form.GetFieldByName("Fecha de Nacimiento").ToString());
+            form.Fields[3].Value = datePicker.Value.ToString("dd/MM/yyyy");
 
             if (A1.Checked)
             {
@@ -79,42 +84,65 @@ namespace ClinicaImagen
             {
                 form.Fields[9].Value = "1";
                 //Dientes
-                bool[] listaDientes_1 = new bool[groupBox17.Controls.Count];
+                List<CheckBox> checkboxesDientes1 = new List<CheckBox>();
 
-
-
-
-                MessageBox.Show(listaDientes_1.Length.ToString());
-
-                for (int i = 0; i < listaDientes_1.Length; i++)
-                {
-                    foreach (Control c in groupBox17.Controls)
+                    foreach(var c in groupBox17.Controls)
                     {
-                        if ((c is CheckBox) && ((CheckBox)c).Checked)
+                        if (c is CheckBox)
                         {
-                            listaDientes_1[i] = true;
+                        checkboxesDientes1.Add((CheckBox)c);
                         }
-                        else if ((c is CheckBox) && !((CheckBox)c).Checked)
-                        {
-                            listaDientes_1[i] = false;
-                        }
+                    }
+
+                CheckBox[] checkBoxes = checkboxesDientes1.ToArray();
+                int checksS = 0;
+                int checksN = 0;
+                for (int v = 0; v < checkBoxes.Length; v++)
+                {
+
+                    if (checkBoxes[v].Checked)
+                    {
+                        checksS++;
+                    }
+                    else
+                    {
+                        checksN++;
                     }
                 }
 
-                for (int i = 10; i < 41; i++)
+                MessageBox.Show($"Cantidad de checkboxes\nTienen Check: {checksS}\nNo check: {checksN}");
+
+                CheckBox[]? CBTxt = new CheckBox[32];
+                bool[] vResultArray = new bool[32];
+
+                for (int n = 0; n < CBTxt.Length; n++)
                 {
-                    for (int n = 0; i < listaDientes_1.Length; i++)
+                    CBTxt[n] = this.Controls.Find("CB" + (n+ 1), true).FirstOrDefault() as CheckBox;
+                    MessageBox.Show($"{CBTxt[n]}");
+                }
+
+                for (int i = 0; i < CBTxt.Length; i++)
+                {
+                    if (CBTxt[i].ToString().Contains('1'))
                     {
-                        MessageBox.Show(listaDientes_1[n].ToString());
-                        form.Fields[i].Value = listaDientes_1[n].ToString();
+                        vResultArray[i] = true;
                     }
+                }
+
+                for (int i = 0; i < vResultArray.Length; i++)
+                {
+                    form.Fields[i + 11].Value = vResultArray[i].ToString();
                 }
             }
-            form.Fields[42].Value = "0";
-            form.Fields[43].Value = "1";
+            form.Fields[43].Value = "0";
+            form.Fields[44].Value = "1";
+
+            //11-42 (43 for loop) 1ra tanda de dientes /44 - 75 (76 en loop) segunda tanda de Dientes
 
 
-            doc.SaveAs($@"C:\Users\fedec\Desktop\Test\formulario-{txtPaciente.Text}-{DateTime.Today.ToString("dd-mm-yyyyy")}.pdf");
+            String fechaActual = DateTime.Now.ToString("dd-MM-yyyy");
+            string archivoAlTerminar = $"\\ClinicaImagenForm-{fechaActual}-{txtPaciente.Text}.pdf";
+            doc.SaveAs(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + archivoAlTerminar);
         }
 
         private void label3_Click(object sender, EventArgs e)
