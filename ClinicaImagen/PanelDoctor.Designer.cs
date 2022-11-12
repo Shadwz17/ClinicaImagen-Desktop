@@ -34,16 +34,22 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvPacientes = new System.Windows.Forms.DataGridView();
+            this.btnAgregarPaciente = new System.Windows.Forms.Button();
+            this.dgvEntrevistas = new System.Windows.Forms.DataGridView();
+            this.btnEntrevistas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntrevistas)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(276, 451);
+            this.button1.Location = new System.Drawing.Point(224, 450);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 25);
             this.button1.TabIndex = 95;
@@ -77,7 +83,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox1.Location = new System.Drawing.Point(-3, 88);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 1073);
+            this.pictureBox1.Size = new System.Drawing.Size(190, 1073);
             this.pictureBox1.TabIndex = 99;
             this.pictureBox1.TabStop = false;
             // 
@@ -91,12 +97,66 @@
             this.label1.TabIndex = 100;
             this.label1.Text = "Pacientes                               ";
             // 
+            // dgvPacientes
+            // 
+            this.dgvPacientes.AllowUserToAddRows = false;
+            this.dgvPacientes.AllowUserToDeleteRows = false;
+            this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPacientes.Location = new System.Drawing.Point(-3, 109);
+            this.dgvPacientes.Name = "dgvPacientes";
+            this.dgvPacientes.ReadOnly = true;
+            this.dgvPacientes.RowTemplate.Height = 25;
+            this.dgvPacientes.Size = new System.Drawing.Size(190, 401);
+            this.dgvPacientes.TabIndex = 101;
+            this.dgvPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPacientes_CellClick);
+            // 
+            // btnAgregarPaciente
+            // 
+            this.btnAgregarPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregarPaciente.AutoSize = true;
+            this.btnAgregarPaciente.Location = new System.Drawing.Point(379, 450);
+            this.btnAgregarPaciente.Name = "btnAgregarPaciente";
+            this.btnAgregarPaciente.Size = new System.Drawing.Size(129, 25);
+            this.btnAgregarPaciente.TabIndex = 102;
+            this.btnAgregarPaciente.Text = "Agregar paciente";
+            this.btnAgregarPaciente.UseVisualStyleBackColor = true;
+            this.btnAgregarPaciente.Click += new System.EventHandler(this.btnAgregarPaciente_Click);
+            // 
+            // dgvEntrevistas
+            // 
+            this.dgvEntrevistas.AllowUserToAddRows = false;
+            this.dgvEntrevistas.AllowUserToDeleteRows = false;
+            this.dgvEntrevistas.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dgvEntrevistas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEntrevistas.GridColor = System.Drawing.SystemColors.Info;
+            this.dgvEntrevistas.Location = new System.Drawing.Point(209, 109);
+            this.dgvEntrevistas.Name = "dgvEntrevistas";
+            this.dgvEntrevistas.ReadOnly = true;
+            this.dgvEntrevistas.RowTemplate.Height = 25;
+            this.dgvEntrevistas.Size = new System.Drawing.Size(315, 254);
+            this.dgvEntrevistas.TabIndex = 103;
+            this.dgvEntrevistas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEntrevistas_CellContentClick);
+            // 
+            // btnEntrevistas
+            // 
+            this.btnEntrevistas.Location = new System.Drawing.Point(299, 386);
+            this.btnEntrevistas.Name = "btnEntrevistas";
+            this.btnEntrevistas.Size = new System.Drawing.Size(129, 23);
+            this.btnEntrevistas.TabIndex = 104;
+            this.btnEntrevistas.Text = "Mostrar Entrevistas";
+            this.btnEntrevistas.UseVisualStyleBackColor = true;
+            this.btnEntrevistas.Click += new System.EventHandler(this.btnEntrevistas_Click);
+            // 
             // PanelDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(536, 508);
+            this.Controls.Add(this.btnEntrevistas);
+            this.Controls.Add(this.dgvEntrevistas);
+            this.Controls.Add(this.btnAgregarPaciente);
+            this.Controls.Add(this.dgvPacientes);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
@@ -110,6 +170,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntrevistas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,5 +184,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvPacientes;
+        private System.Windows.Forms.Button btnAgregarPaciente;
+        private System.Windows.Forms.DataGridView dgvEntrevistas;
+        private System.Windows.Forms.Button btnEntrevistas;
     }
 }

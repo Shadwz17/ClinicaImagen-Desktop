@@ -19,7 +19,6 @@ namespace ClinicaImagen
     public partial class Form3 : Form
     {
         MySqlCommand cmd;
-        MySqlDataReader reader2;
         public Form3()
         {
             InitializeComponent();
@@ -38,9 +37,10 @@ namespace ClinicaImagen
             connection.Open();
 
             MessageBox.Show(informacion.correoLogin);
-            var loginQuery = new MySqlCommand($"SELECT nombre FROM usuarios WHERE correo =\"{informacion.correoLogin}\"", connection);
+            var loginQuery = new MySqlCommand($"SELECT id, nombre FROM doctor WHERE email=\"{informacion.correoLogin}\"", connection);
             var reader = loginQuery.ExecuteReader();
             reader.Read();
+            int doctorID = (int)reader["id"];
             string workingDirectory = Environment.CurrentDirectory;
             string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
 
@@ -51,7 +51,6 @@ namespace ClinicaImagen
 
 
             form.Fields[0].Value = (string)reader["nombre"];
-            reader.Close();
             form.Fields[1].Value = txtPaciente.Text;
 
             //Generos
@@ -275,7 +274,8 @@ namespace ClinicaImagen
 
 
 
-
+            MainFunc.Email(MainFunc.correoAdmin, "Nuevo formulario - Clinica Imagen", $"{(string)reader["nombre"]}, ha enviado un nuevo formulario.");
+            reader.Close();
             String fechaActual = DateTime.Now.ToString("dd-MM-yyyy");
             string archivoAlTerminar = $"\\ClinicaImagenForm-{fechaActual}-{txtPaciente.Text}.pdf";
             doc.SaveAs(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + archivoAlTerminar);
@@ -284,33 +284,21 @@ namespace ClinicaImagen
             byte[] contents = new byte[fstream.Length];
             fstream.Read(contents, 0, (int)fstream.Length);
             fstream.Close();
-            using (cmd = new MySqlCommand("insert into formulario(archivo) values(@archivo)", connection))
+            using (cmd = new MySqlCommand($"insert into formulario(archivo, fecha, doctor) values(@archivo, '{DateTime.Now.ToString("yyyy-MM-dd")}', '{doctorID}')", connection))
             {
+                MySqlDataReader reader2;
                 cmd.Parameters.AddWithValue("@archivo", contents);
-                cmd.ExecuteNonQuery();
+                reader2 = cmd.ExecuteReader();
             }
 
             connection.Close();
+            PanelDoctor formp = new PanelDoctor();
+            this.Hide();
+            formp.Show();
            
 
 
         }
-
-        public void UploadFile(string file)
-        {
-            MySqlConnection connection = new MySqlConnection(MainFunc.connString);
-            connection.Open();
-            FileStream fstream = File.OpenRead(file);
-            byte[] contents = new byte[fstream.Length];
-            fstream.Read(contents, 0, (int)fstream.Length);
-            fstream.Close();
-            using (cmd = new MySqlCommand("insert into formulario(archivo)"))
-            {
-                cmd.Parameters.AddWithValue("@archivo", contents);
-                cmd.ExecuteNonQuery();
-            }
-        }
-
 
         private void label3_Click(object sender, EventArgs e)
         {

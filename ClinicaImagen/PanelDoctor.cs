@@ -13,10 +13,11 @@ namespace ClinicaImagen
 {
     public partial class PanelDoctor : Form
     {
-        string[] datos = new string[2];
         public PanelDoctor()
         { 
             InitializeComponent();
+            dgvPacientes.ScrollBars = ScrollBars.Horizontal;
+            dgvPacientes.DataSource = Pacientes();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,22 +27,68 @@ namespace ClinicaImagen
             form3.Show();
         }
 
-        void Pacientes()
+        DataTable resultados = new DataTable();
+        string _dgvrowValue;
+        public string dgvrowValue
         {
+            get { return _dgvrowValue; }
+            set
+            {
+                if (value == _dgvrowValue) return;
+                _dgvrowValue = value;
+            }
+        }
+
+        DataTable Pacientes()
+        {
+            DataTable pacientes = new DataTable();
             using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
             {
-                using (MySqlCommand cmd = new MySqlCommand($"SELECT nombre, direccion, telefono FROM paciente WHERE idD=\"{FormLogin.informacion.correoLogin}\"", connection))
+                using (MySqlCommand cmd = new MySqlCommand($"SELECT nombre, direccion, telefono FROM paciente WHERE idD=(SELECT id FROM doctor WHERE email=\"{FormLogin.informacion.correoLogin}\")", connection))
                 {
                     connection.Open();
                     MySqlDataReader reader = cmd.ExecuteReader();
-
-                    for (int i = 0; i < 2; i++)
-                    {
-                        reader.Read();
-                        datos[i] = reader.GetString(i);
-                    }
+                    pacientes.Load(reader);
                 }
+                return pacientes;
             }
+        }
+
+        private void dgvPacientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int columnindex = dgvPacientes.CurrentCell.ColumnIndex;
+            if (columnindex == 0)
+            {
+                _dgvrowValue = dgvPacientes.CurrentRow.Cells[0].Value.ToString();
+            }
+        }
+
+        private void dgvEntrevistas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Descargar desde panel doctor - TODO
+        }
+
+        private void btnAgregarPaciente_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(dgvrowValue);
+        }
+
+        private void btnEntrevistas_Click(object sender, EventArgs e)
+        {
+            dgvEntrevistas.Rows.Clear();
+            dgvEntrevistas.Columns.Clear();
+            MySqlConnection conx = new MySqlConnection(MainFunc.connString);
+            conx.Open();
+            MySqlCommand cmd = new MySqlCommand($"SELECT fecha FROM entrevista WHERE idP=(SELECT id FROM paciente WHERE nombre=\"{dgvrowValue}\") " +
+                                                $"AND idD=(SELECT id FROM doctor WHERE email=\"{FormLogin.informacion.correoLogin}\")  ", conx);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            resultados.Load(reader);
+            dgvEntrevistas.DataSource = resultados;
+        }
+
+        private void dgvEntrevistas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

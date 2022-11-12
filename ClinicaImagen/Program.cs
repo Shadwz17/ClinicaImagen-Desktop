@@ -39,7 +39,7 @@ namespace ClinicaImagen
                 SmtpClient client = new SmtpClient("smtp.gmail.com");
 
                 // Follow the RFS 5321 Email Standard
-                newMail.From = new MailAddress("tecnologicfzala@gmail.com", "Futbol Sala");
+                newMail.From = new MailAddress("tecnologicfzala@gmail.com", "Clinica Imagen");
 
                 newMail.To.Add(EmailUser);// declare the email subject
 
@@ -55,7 +55,6 @@ namespace ClinicaImagen
                 client.Credentials = new System.Net.NetworkCredential("tecnologicfzala@gmail.com", "tmbwbbgrftjkrhgg");
 
                 client.Send(newMail); // Send the constructed mail
-                MessageBox.Show("Email Sent");
             }
             catch (Exception ex)
             {

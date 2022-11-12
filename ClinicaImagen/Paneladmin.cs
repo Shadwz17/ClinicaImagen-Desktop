@@ -13,17 +13,20 @@ using EASendMail;
 using System.Net.Mail;
 using SmtpClient = System.Net.Mail.SmtpClient;
 using MailAddress = System.Net.Mail.MailAddress;
+using System.IO;
 
 namespace ClinicaImagen
 {
     public partial class Paneladmin : Form
     {
+        string inputFile;
+        string[] datosDoctor = new string[2];
         string[] datos = new string[2];
         public Paneladmin()
         {
             InitializeComponent();
             dgVerificados.DataSource = usuariosVerificados();
-            dgNoVerificados.DataSource = usuariosNoVerificados();
+            dgFormularios.DataSource = MostrarFormularios();
             datosUsuario();
             lblCorreo.Text = $"Correo: \n{datos[0]}";
             lblUsuario.Text = $"Usuario: \n{datos[1]}";
@@ -48,12 +51,30 @@ namespace ClinicaImagen
             }
         }
 
+        private void datosDoctorF()
+        {
+            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand($"SELECT email, nombre from doctor", connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    for (int i = 0; i < 2; i++)
+                    {
+                        reader.Read();
+                        datosDoctor[i] = reader.GetString(i);
+                    }
+                }
+            }
+        }
+
         private DataTable usuariosVerificados()
         {
             DataTable usuarios = new DataTable();
             using (MySqlConnection connection =  new MySqlConnection(MainFunc.connString))
             {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT correo, passwd, nombre from usuarios WHERE verificado=1 AND cargo=\"Asesor\"", connection))
+                using (MySqlCommand cmd = new MySqlCommand("SELECT correo, nombre from usuarios WHERE verificado=1", connection))
                 {
                     connection.Open();
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -64,12 +85,13 @@ namespace ClinicaImagen
             return usuarios;
         }
 
-        private DataTable usuariosNoVerificados()
+        private DataTable MostrarFormularios()
         {
+            datosDoctorF();
             DataTable usuarios = new DataTable();
             using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
             {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT correo, passwd, nombre from usuarios WHERE verificado=0", connection))
+                using (MySqlCommand cmd = new MySqlCommand($"SELECT num_form AS \"Numero de Formulario\", fecha AS \"Ingresado\" from formulario", connection))
                 {
                     connection.Open();
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -125,7 +147,7 @@ namespace ClinicaImagen
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             dgVerificados.DataSource = usuariosVerificados();
-            dgNoVerificados.DataSource = usuariosNoVerificados();
+            dgFormularios.DataSource = MostrarFormularios();
         }
 
         private void btnActualizarContraseña_Click(object sender, EventArgs e)
@@ -153,35 +175,58 @@ namespace ClinicaImagen
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            try
+            inputFile = Microsoft.VisualBasic.Interaction.InputBox("Cual archivo desea descargar? (ID)", "Descarga - CI", "", 0, 0);
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Text Document (.pdf)|*.pdf", ValidateNames = true })
             {
-                MailMessage newMail = new MailMessage();
-                // use the Gmail SMTP Host
-                SmtpClient client = new SmtpClient("smtp.gmail.com");
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    DialogResult result = MessageBox.Show("Estas seguro que quieres descargar este archivo? ", "Descargas", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        String filename = sfd.FileName;
+                        Downloadfile(filename);
+                    }
+                }
+            } 
+        }
 
-                // Follow the RFS 5321 Email Standard
-                newMail.From = new MailAddress("harrypotato62@gmail.com", "Futbol Sala");
-
-                newMail.To.Add("ascheiber2k04@gmail.com");// declare the email subject
-
-                newMail.Subject = "My First Email"; // use HTML for the email body
-
-                newMail.IsBodyHtml = true; newMail.Body = "<h1> This is my first Templated Email in C# </h1>";
-
-                // enable SSL for encryption across channels
-                client.EnableSsl = true;
-                // Port 465 for SSL communication
-                client.Port = 587;
-                // Provide authentication information with Gmail SMTP server to authenticate your sender account
-                client.Credentials = new System.Net.NetworkCredential("harrypotato62@gmail.com", "-YourPWD-");
-
-                client.Send(newMail); // Send the constructed mail
-                MessageBox.Show("Email Sent");
-            }
-            catch (Exception ex)
+        public void Downloadfile(string file)
+        {
+           MySqlConnection conDownload = new MySqlConnection(MainFunc.connString);
+            conDownload.Open();
+            bool em = false;
+            using (MySqlCommand cmd = new MySqlCommand($"SELECT archivo FROM formulario WHERE num_form = {inputFile}", conDownload))
             {
-                MessageBox.Show("Error -" + ex);
+                using (MySqlDataReader reader = cmd.ExecuteReader(CommandBehavior.Default))
+                {
+                    if (reader.Read())
+                    {
+                        em = true;
+                        byte[] fileData = (byte[])reader.GetValue(0);
+                        using (FileStream fs = new FileStream(file, FileMode.Create, FileAccess.ReadWrite))
+                        {
+                            using (BinaryWriter bw = new BinaryWriter(fs))
+                            {
+                                bw.Write(fileData);
+                                bw.Close();
+                            }
+                        }
+
+            if (em == false)
+                        {
+                            MessageBox.Show("Ningun dato ingresado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    reader.Close();
+                }
             }
+        }
+
+        private void btnGraficas_Click(object sender, EventArgs e)
+        {
+            formGrafico form = new formGrafico();
+            this.Hide();
+            form.Show();
         }
     }
 }

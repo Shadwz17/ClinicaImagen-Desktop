@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Paneladmin));
             this.dgVerificados = new System.Windows.Forms.DataGridView();
-            this.dgNoVerificados = new System.Windows.Forms.DataGridView();
+            this.dgFormularios = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnVerificar = new System.Windows.Forms.Button();
@@ -40,8 +40,9 @@
             this.lblCorreo = new System.Windows.Forms.Label();
             this.btnResetearPwd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnGraficas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgVerificados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgNoVerificados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFormularios)).BeginInit();
             this.SuspendLayout();
             // 
             // dgVerificados
@@ -61,22 +62,22 @@
             this.dgVerificados.TabIndex = 0;
             this.dgVerificados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgVerificados_CellContentClick);
             // 
-            // dgNoVerificados
+            // dgFormularios
             // 
-            this.dgNoVerificados.AllowUserToAddRows = false;
-            this.dgNoVerificados.AllowUserToDeleteRows = false;
-            this.dgNoVerificados.AllowUserToResizeColumns = false;
-            this.dgNoVerificados.AllowUserToResizeRows = false;
-            this.dgNoVerificados.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.dgNoVerificados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgNoVerificados.Location = new System.Drawing.Point(398, 32);
-            this.dgNoVerificados.MultiSelect = false;
-            this.dgNoVerificados.Name = "dgNoVerificados";
-            this.dgNoVerificados.ReadOnly = true;
-            this.dgNoVerificados.RowTemplate.Height = 25;
-            this.dgNoVerificados.Size = new System.Drawing.Size(402, 421);
-            this.dgNoVerificados.TabIndex = 1;
-            this.dgNoVerificados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dgFormularios.AllowUserToAddRows = false;
+            this.dgFormularios.AllowUserToDeleteRows = false;
+            this.dgFormularios.AllowUserToResizeColumns = false;
+            this.dgFormularios.AllowUserToResizeRows = false;
+            this.dgFormularios.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.dgFormularios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgFormularios.Location = new System.Drawing.Point(398, 32);
+            this.dgFormularios.MultiSelect = false;
+            this.dgFormularios.Name = "dgFormularios";
+            this.dgFormularios.ReadOnly = true;
+            this.dgFormularios.RowTemplate.Height = 25;
+            this.dgFormularios.Size = new System.Drawing.Size(402, 421);
+            this.dgFormularios.TabIndex = 1;
+            this.dgFormularios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // label1
             // 
@@ -97,9 +98,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label2.Location = new System.Drawing.Point(398, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 25);
+            this.label2.Size = new System.Drawing.Size(120, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Pendientes:";
+            this.label2.Text = "Formularios:";
             // 
             // btnVerificar
             // 
@@ -172,9 +173,21 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 47);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Verificar";
+            this.button1.Text = "Descargar Formulario";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnGraficas
+            // 
+            this.btnGraficas.BackColor = System.Drawing.Color.BurlyWood;
+            this.btnGraficas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnGraficas.Location = new System.Drawing.Point(808, 333);
+            this.btnGraficas.Name = "btnGraficas";
+            this.btnGraficas.Size = new System.Drawing.Size(172, 47);
+            this.btnGraficas.TabIndex = 11;
+            this.btnGraficas.Text = "Gráficos";
+            this.btnGraficas.UseVisualStyleBackColor = false;
+            this.btnGraficas.Click += new System.EventHandler(this.btnGraficas_Click);
             // 
             // Paneladmin
             // 
@@ -182,6 +195,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(992, 508);
+            this.Controls.Add(this.btnGraficas);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnResetearPwd);
             this.Controls.Add(this.lblCorreo);
@@ -191,7 +205,7 @@
             this.Controls.Add(this.btnVerificar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgNoVerificados);
+            this.Controls.Add(this.dgFormularios);
             this.Controls.Add(this.dgVerificados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -199,7 +213,7 @@
             this.Text = "Clinica Imagen - Admin";
             this.Load += new System.EventHandler(this.Paneladmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgVerificados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgNoVerificados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFormularios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +222,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgVerificados;
-        private System.Windows.Forms.DataGridView dgNoVerificados;
+        private System.Windows.Forms.DataGridView dgFormularios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVerificar;
@@ -218,5 +232,6 @@
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Button btnResetearPwd;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGraficas;
     }
 }
