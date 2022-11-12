@@ -45,29 +45,29 @@
             this.M2 = new System.Windows.Forms.RadioButton();
             this.M1 = new System.Windows.Forms.RadioButton();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.N2 = new System.Windows.Forms.RadioButton();
-            this.P2 = new System.Windows.Forms.RadioButton();
-            this.S2 = new System.Windows.Forms.RadioButton();
+            this.nn5 = new System.Windows.Forms.RadioButton();
+            this.Pp5 = new System.Windows.Forms.RadioButton();
+            this.Sj5 = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.P1 = new System.Windows.Forms.RadioButton();
-            this.S1 = new System.Windows.Forms.RadioButton();
-            this.N1 = new System.Windows.Forms.RadioButton();
+            this.Pp4 = new System.Windows.Forms.RadioButton();
+            this.Sj4 = new System.Windows.Forms.RadioButton();
+            this.nn4 = new System.Windows.Forms.RadioButton();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.N3 = new System.Windows.Forms.RadioButton();
-            this.P3 = new System.Windows.Forms.RadioButton();
-            this.S3 = new System.Windows.Forms.RadioButton();
+            this.nn6 = new System.Windows.Forms.RadioButton();
+            this.Pp6 = new System.Windows.Forms.RadioButton();
+            this.Sj6 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.nn2 = new System.Windows.Forms.RadioButton();
+            this.Pp2 = new System.Windows.Forms.RadioButton();
+            this.Sj2 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.Pp1 = new System.Windows.Forms.RadioButton();
+            this.Sj1 = new System.Windows.Forms.RadioButton();
+            this.nn1 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.S4 = new System.Windows.Forms.RadioButton();
+            this.nn3 = new System.Windows.Forms.RadioButton();
+            this.Pp3 = new System.Windows.Forms.RadioButton();
+            this.Sj3 = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -87,21 +87,17 @@
             this.O1 = new System.Windows.Forms.RadioButton();
             this.St1 = new System.Windows.Forms.RadioButton();
             this.D2 = new System.Windows.Forms.RadioButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb3 = new System.Windows.Forms.TextBox();
             this.D1 = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.M8 = new System.Windows.Forms.RadioButton();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.M10 = new System.Windows.Forms.RadioButton();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.mm = new System.Windows.Forms.RadioButton();
+            this.mm2 = new System.Windows.Forms.RadioButton();
+            this.Mo = new System.Windows.Forms.CheckBox();
             this.M9 = new System.Windows.Forms.RadioButton();
-            this.M7 = new System.Windows.Forms.RadioButton();
             this.M6 = new System.Windows.Forms.RadioButton();
-            this.M5 = new System.Windows.Forms.RadioButton();
-            this.MM = new System.Windows.Forms.CheckBox();
-            this.MM2 = new System.Windows.Forms.CheckBox();
-            this.MM3 = new System.Windows.Forms.CheckBox();
-            this.MM4 = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.M4 = new System.Windows.Forms.RadioButton();
@@ -113,8 +109,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.ataches_nocolocar = new System.Windows.Forms.RadioButton();
+            this.ataches_colocar = new System.Windows.Forms.RadioButton();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.CBB17 = new System.Windows.Forms.CheckBox();
             this.CBB1 = new System.Windows.Forms.CheckBox();
@@ -191,7 +187,7 @@
             this.M = new System.Windows.Forms.RadioButton();
             this.F = new System.Windows.Forms.RadioButton();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.sI1 = new System.Windows.Forms.RadioButton();
+            this.sl1 = new System.Windows.Forms.RadioButton();
             this.sS1 = new System.Windows.Forms.RadioButton();
             this.A1 = new System.Windows.Forms.RadioButton();
             this.label24 = new System.Windows.Forms.Label();
@@ -202,6 +198,13 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.mm3 = new System.Windows.Forms.RadioButton();
+            this.mm4 = new System.Windows.Forms.RadioButton();
+            this.Mo2 = new System.Windows.Forms.CheckBox();
+            this.M01 = new System.Windows.Forms.RadioButton();
+            this.M0 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -214,6 +217,7 @@
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.groupBox21.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
@@ -224,13 +228,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox18.SuspendLayout();
             this.groupBox19.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            this.groupBox22.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::ClinicaImagen.Properties.Resources.Sin_título_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(223, -57);
+            this.pictureBox1.Location = new System.Drawing.Point(299, -70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(528, 163);
             this.pictureBox1.TabIndex = 5;
@@ -255,7 +261,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Location = new System.Drawing.Point(505, 1627);
+            this.button1.Location = new System.Drawing.Point(538, 1647);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 94;
@@ -268,7 +274,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(227, 1302);
+            this.label4.Location = new System.Drawing.Point(304, 1310);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 21);
             this.label4.TabIndex = 95;
@@ -279,7 +285,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(227, 1355);
+            this.label1.Location = new System.Drawing.Point(304, 1363);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 21);
             this.label1.TabIndex = 97;
@@ -290,7 +296,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(227, 1323);
+            this.label2.Location = new System.Drawing.Point(304, 1331);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 21);
             this.label2.TabIndex = 98;
@@ -301,7 +307,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(229, 1381);
+            this.label3.Location = new System.Drawing.Point(306, 1389);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 21);
             this.label3.TabIndex = 99;
@@ -313,7 +319,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(79, 1420);
+            this.label5.Location = new System.Drawing.Point(156, 1428);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(233, 21);
             this.label5.TabIndex = 112;
@@ -324,7 +330,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(77, 1452);
+            this.label6.Location = new System.Drawing.Point(154, 1460);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(882, 21);
             this.label6.TabIndex = 115;
@@ -335,7 +341,7 @@
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(101, 1493);
+            this.textBox1.Location = new System.Drawing.Point(178, 1501);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(851, 23);
             this.textBox1.TabIndex = 116;
@@ -346,7 +352,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(73, 1545);
+            this.label7.Location = new System.Drawing.Point(150, 1553);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(980, 21);
             this.label7.TabIndex = 117;
@@ -357,7 +363,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Location = new System.Drawing.Point(98, 1577);
+            this.textBox2.Location = new System.Drawing.Point(175, 1585);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(851, 23);
             this.textBox2.TabIndex = 118;
@@ -368,7 +374,7 @@
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox4.Controls.Add(this.M2);
             this.groupBox4.Controls.Add(this.M1);
-            this.groupBox4.Location = new System.Drawing.Point(305, 1423);
+            this.groupBox4.Location = new System.Drawing.Point(382, 1431);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(148, 18);
             this.groupBox4.TabIndex = 122;
@@ -399,279 +405,279 @@
             // groupBox9
             // 
             this.groupBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox9.Controls.Add(this.N2);
-            this.groupBox9.Controls.Add(this.P2);
-            this.groupBox9.Controls.Add(this.S2);
-            this.groupBox9.Location = new System.Drawing.Point(307, 1352);
+            this.groupBox9.Controls.Add(this.nn5);
+            this.groupBox9.Controls.Add(this.Pp5);
+            this.groupBox9.Controls.Add(this.Sj5);
+            this.groupBox9.Location = new System.Drawing.Point(384, 1360);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(261, 24);
             this.groupBox9.TabIndex = 159;
             this.groupBox9.TabStop = false;
             // 
-            // N2
+            // nn5
             // 
-            this.N2.AutoSize = true;
-            this.N2.Location = new System.Drawing.Point(207, 7);
-            this.N2.Name = "N2";
-            this.N2.Size = new System.Drawing.Size(53, 19);
-            this.N2.TabIndex = 168;
-            this.N2.TabStop = true;
-            this.N2.Text = "Nada";
-            this.N2.UseVisualStyleBackColor = true;
+            this.nn5.AutoSize = true;
+            this.nn5.Location = new System.Drawing.Point(207, 7);
+            this.nn5.Name = "nn5";
+            this.nn5.Size = new System.Drawing.Size(53, 19);
+            this.nn5.TabIndex = 168;
+            this.nn5.TabStop = true;
+            this.nn5.Text = "Nada";
+            this.nn5.UseVisualStyleBackColor = true;
             // 
-            // P2
+            // Pp5
             // 
-            this.P2.AutoSize = true;
-            this.P2.Location = new System.Drawing.Point(0, 7);
-            this.P2.Name = "P2";
-            this.P2.Size = new System.Drawing.Size(105, 19);
-            this.P2.TabIndex = 167;
-            this.P2.TabStop = true;
-            this.P2.Text = "Principalmente";
-            this.P2.UseVisualStyleBackColor = true;
+            this.Pp5.AutoSize = true;
+            this.Pp5.Location = new System.Drawing.Point(0, 7);
+            this.Pp5.Name = "Pp5";
+            this.Pp5.Size = new System.Drawing.Size(105, 19);
+            this.Pp5.TabIndex = 167;
+            this.Pp5.TabStop = true;
+            this.Pp5.Text = "Principalmente";
+            this.Pp5.UseVisualStyleBackColor = true;
             // 
-            // S2
+            // Sj5
             // 
-            this.S2.AutoSize = true;
-            this.S2.Location = new System.Drawing.Point(105, 6);
-            this.S2.Name = "S2";
-            this.S2.Size = new System.Drawing.Size(101, 19);
-            this.S2.TabIndex = 168;
-            this.S2.TabStop = true;
-            this.S2.Text = "Si es necesario";
-            this.S2.UseVisualStyleBackColor = true;
+            this.Sj5.AutoSize = true;
+            this.Sj5.Location = new System.Drawing.Point(105, 6);
+            this.Sj5.Name = "Sj5";
+            this.Sj5.Size = new System.Drawing.Size(101, 19);
+            this.Sj5.TabIndex = 168;
+            this.Sj5.TabStop = true;
+            this.Sj5.Text = "Si es necesario";
+            this.Sj5.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
             this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox6.Controls.Add(this.P1);
-            this.groupBox6.Controls.Add(this.S1);
-            this.groupBox6.Controls.Add(this.N1);
-            this.groupBox6.Location = new System.Drawing.Point(306, 1320);
+            this.groupBox6.Controls.Add(this.Pp4);
+            this.groupBox6.Controls.Add(this.Sj4);
+            this.groupBox6.Controls.Add(this.nn4);
+            this.groupBox6.Location = new System.Drawing.Point(383, 1328);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(261, 24);
             this.groupBox6.TabIndex = 158;
             this.groupBox6.TabStop = false;
             // 
-            // P1
+            // Pp4
             // 
-            this.P1.AutoSize = true;
-            this.P1.Location = new System.Drawing.Point(0, 7);
-            this.P1.Name = "P1";
-            this.P1.Size = new System.Drawing.Size(105, 19);
-            this.P1.TabIndex = 166;
-            this.P1.TabStop = true;
-            this.P1.Text = "Principalmente";
-            this.P1.UseVisualStyleBackColor = true;
+            this.Pp4.AutoSize = true;
+            this.Pp4.Location = new System.Drawing.Point(0, 7);
+            this.Pp4.Name = "Pp4";
+            this.Pp4.Size = new System.Drawing.Size(105, 19);
+            this.Pp4.TabIndex = 166;
+            this.Pp4.TabStop = true;
+            this.Pp4.Text = "Principalmente";
+            this.Pp4.UseVisualStyleBackColor = true;
             // 
-            // S1
+            // Sj4
             // 
-            this.S1.AutoSize = true;
-            this.S1.Location = new System.Drawing.Point(105, 7);
-            this.S1.Name = "S1";
-            this.S1.Size = new System.Drawing.Size(101, 19);
-            this.S1.TabIndex = 167;
-            this.S1.TabStop = true;
-            this.S1.Text = "Si es necesario";
-            this.S1.UseVisualStyleBackColor = true;
+            this.Sj4.AutoSize = true;
+            this.Sj4.Location = new System.Drawing.Point(105, 7);
+            this.Sj4.Name = "Sj4";
+            this.Sj4.Size = new System.Drawing.Size(101, 19);
+            this.Sj4.TabIndex = 167;
+            this.Sj4.TabStop = true;
+            this.Sj4.Text = "Si es necesario";
+            this.Sj4.UseVisualStyleBackColor = true;
             // 
-            // N1
+            // nn4
             // 
-            this.N1.AutoSize = true;
-            this.N1.Location = new System.Drawing.Point(208, 7);
-            this.N1.Name = "N1";
-            this.N1.Size = new System.Drawing.Size(53, 19);
-            this.N1.TabIndex = 166;
-            this.N1.TabStop = true;
-            this.N1.Text = "Nada";
-            this.N1.UseVisualStyleBackColor = true;
+            this.nn4.AutoSize = true;
+            this.nn4.Location = new System.Drawing.Point(208, 7);
+            this.nn4.Name = "nn4";
+            this.nn4.Size = new System.Drawing.Size(53, 19);
+            this.nn4.TabIndex = 166;
+            this.nn4.TabStop = true;
+            this.nn4.Text = "Nada";
+            this.nn4.UseVisualStyleBackColor = true;
             // 
             // groupBox10
             // 
             this.groupBox10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox10.Controls.Add(this.N3);
-            this.groupBox10.Controls.Add(this.P3);
-            this.groupBox10.Controls.Add(this.S3);
-            this.groupBox10.Location = new System.Drawing.Point(309, 1378);
+            this.groupBox10.Controls.Add(this.nn6);
+            this.groupBox10.Controls.Add(this.Pp6);
+            this.groupBox10.Controls.Add(this.Sj6);
+            this.groupBox10.Location = new System.Drawing.Point(386, 1386);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(261, 24);
             this.groupBox10.TabIndex = 157;
             this.groupBox10.TabStop = false;
             // 
-            // N3
+            // nn6
             // 
-            this.N3.AutoSize = true;
-            this.N3.Location = new System.Drawing.Point(204, 7);
-            this.N3.Name = "N3";
-            this.N3.Size = new System.Drawing.Size(53, 19);
-            this.N3.TabIndex = 167;
-            this.N3.TabStop = true;
-            this.N3.Text = "Nada";
-            this.N3.UseVisualStyleBackColor = true;
+            this.nn6.AutoSize = true;
+            this.nn6.Location = new System.Drawing.Point(204, 7);
+            this.nn6.Name = "nn6";
+            this.nn6.Size = new System.Drawing.Size(53, 19);
+            this.nn6.TabIndex = 167;
+            this.nn6.TabStop = true;
+            this.nn6.Text = "Nada";
+            this.nn6.UseVisualStyleBackColor = true;
             // 
-            // P3
+            // Pp6
             // 
-            this.P3.AutoSize = true;
-            this.P3.Location = new System.Drawing.Point(0, 7);
-            this.P3.Name = "P3";
-            this.P3.Size = new System.Drawing.Size(105, 19);
-            this.P3.TabIndex = 168;
-            this.P3.TabStop = true;
-            this.P3.Text = "Principalmente";
-            this.P3.UseVisualStyleBackColor = true;
+            this.Pp6.AutoSize = true;
+            this.Pp6.Location = new System.Drawing.Point(0, 7);
+            this.Pp6.Name = "Pp6";
+            this.Pp6.Size = new System.Drawing.Size(105, 19);
+            this.Pp6.TabIndex = 168;
+            this.Pp6.TabStop = true;
+            this.Pp6.Text = "Principalmente";
+            this.Pp6.UseVisualStyleBackColor = true;
             // 
-            // S3
+            // Sj6
             // 
-            this.S3.AutoSize = true;
-            this.S3.Location = new System.Drawing.Point(106, 7);
-            this.S3.Name = "S3";
-            this.S3.Size = new System.Drawing.Size(101, 19);
-            this.S3.TabIndex = 169;
-            this.S3.TabStop = true;
-            this.S3.Text = "Si es necesario";
-            this.S3.UseVisualStyleBackColor = true;
+            this.Sj6.AutoSize = true;
+            this.Sj6.Location = new System.Drawing.Point(106, 7);
+            this.Sj6.Name = "Sj6";
+            this.Sj6.Size = new System.Drawing.Size(101, 19);
+            this.Sj6.TabIndex = 169;
+            this.Sj6.TabStop = true;
+            this.Sj6.Text = "Si es necesario";
+            this.Sj6.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Location = new System.Drawing.Point(299, 1246);
+            this.groupBox1.Controls.Add(this.nn2);
+            this.groupBox1.Controls.Add(this.Pp2);
+            this.groupBox1.Controls.Add(this.Sj2);
+            this.groupBox1.Location = new System.Drawing.Point(376, 1254);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(261, 24);
             this.groupBox1.TabIndex = 166;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton1
+            // nn2
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(207, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(53, 19);
-            this.radioButton1.TabIndex = 168;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nada";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.nn2.AutoSize = true;
+            this.nn2.Location = new System.Drawing.Point(207, 5);
+            this.nn2.Name = "nn2";
+            this.nn2.Size = new System.Drawing.Size(53, 19);
+            this.nn2.TabIndex = 168;
+            this.nn2.TabStop = true;
+            this.nn2.Text = "Nada";
+            this.nn2.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // Pp2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(0, 7);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(105, 19);
-            this.radioButton2.TabIndex = 167;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Principalmente";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Pp2.AutoSize = true;
+            this.Pp2.Location = new System.Drawing.Point(0, 7);
+            this.Pp2.Name = "Pp2";
+            this.Pp2.Size = new System.Drawing.Size(105, 19);
+            this.Pp2.TabIndex = 167;
+            this.Pp2.TabStop = true;
+            this.Pp2.Text = "Principalmente";
+            this.Pp2.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // Sj2
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(105, 6);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(101, 19);
-            this.radioButton3.TabIndex = 168;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Si es necesario";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.Sj2.AutoSize = true;
+            this.Sj2.Location = new System.Drawing.Point(105, 6);
+            this.Sj2.Name = "Sj2";
+            this.Sj2.Size = new System.Drawing.Size(101, 19);
+            this.Sj2.TabIndex = 168;
+            this.Sj2.TabStop = true;
+            this.Sj2.Text = "Si es necesario";
+            this.Sj2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.radioButton5);
-            this.groupBox2.Controls.Add(this.radioButton6);
-            this.groupBox2.Location = new System.Drawing.Point(298, 1223);
+            this.groupBox2.Controls.Add(this.Pp1);
+            this.groupBox2.Controls.Add(this.Sj1);
+            this.groupBox2.Controls.Add(this.nn1);
+            this.groupBox2.Location = new System.Drawing.Point(375, 1231);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(261, 24);
             this.groupBox2.TabIndex = 167;
             this.groupBox2.TabStop = false;
             // 
-            // radioButton4
+            // Pp1
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(0, 7);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(105, 19);
-            this.radioButton4.TabIndex = 166;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Principalmente";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.Pp1.AutoSize = true;
+            this.Pp1.Location = new System.Drawing.Point(0, 7);
+            this.Pp1.Name = "Pp1";
+            this.Pp1.Size = new System.Drawing.Size(105, 19);
+            this.Pp1.TabIndex = 166;
+            this.Pp1.TabStop = true;
+            this.Pp1.Text = "Principalmente";
+            this.Pp1.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // Sj1
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(105, 7);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(101, 19);
-            this.radioButton5.TabIndex = 167;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Si es necesario";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.Sj1.AutoSize = true;
+            this.Sj1.Location = new System.Drawing.Point(105, 7);
+            this.Sj1.Name = "Sj1";
+            this.Sj1.Size = new System.Drawing.Size(101, 19);
+            this.Sj1.TabIndex = 167;
+            this.Sj1.TabStop = true;
+            this.Sj1.Text = "Si es necesario";
+            this.Sj1.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // nn1
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(208, 7);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(53, 19);
-            this.radioButton6.TabIndex = 166;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Nada";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.nn1.AutoSize = true;
+            this.nn1.Location = new System.Drawing.Point(208, 7);
+            this.nn1.Name = "nn1";
+            this.nn1.Size = new System.Drawing.Size(53, 19);
+            this.nn1.TabIndex = 166;
+            this.nn1.TabStop = true;
+            this.nn1.Text = "Nada";
+            this.nn1.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox3.Controls.Add(this.radioButton7);
-            this.groupBox3.Controls.Add(this.radioButton8);
-            this.groupBox3.Controls.Add(this.S4);
-            this.groupBox3.Location = new System.Drawing.Point(298, 1267);
+            this.groupBox3.Controls.Add(this.nn3);
+            this.groupBox3.Controls.Add(this.Pp3);
+            this.groupBox3.Controls.Add(this.Sj3);
+            this.groupBox3.Location = new System.Drawing.Point(375, 1275);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(261, 24);
             this.groupBox3.TabIndex = 165;
             this.groupBox3.TabStop = false;
             // 
-            // radioButton7
+            // nn3
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(208, 9);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(53, 19);
-            this.radioButton7.TabIndex = 167;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Nada";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.nn3.AutoSize = true;
+            this.nn3.Location = new System.Drawing.Point(208, 7);
+            this.nn3.Name = "nn3";
+            this.nn3.Size = new System.Drawing.Size(53, 19);
+            this.nn3.TabIndex = 167;
+            this.nn3.TabStop = true;
+            this.nn3.Text = "Nada";
+            this.nn3.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // Pp3
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(0, 7);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(105, 19);
-            this.radioButton8.TabIndex = 168;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Principalmente";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.Pp3.AutoSize = true;
+            this.Pp3.Location = new System.Drawing.Point(0, 7);
+            this.Pp3.Name = "Pp3";
+            this.Pp3.Size = new System.Drawing.Size(105, 19);
+            this.Pp3.TabIndex = 168;
+            this.Pp3.TabStop = true;
+            this.Pp3.Text = "Principalmente";
+            this.Pp3.UseVisualStyleBackColor = true;
             // 
-            // S4
+            // Sj3
             // 
-            this.S4.AutoSize = true;
-            this.S4.Location = new System.Drawing.Point(106, 7);
-            this.S4.Name = "S4";
-            this.S4.Size = new System.Drawing.Size(101, 19);
-            this.S4.TabIndex = 169;
-            this.S4.TabStop = true;
-            this.S4.Text = "Si es necesario";
-            this.S4.UseVisualStyleBackColor = true;
+            this.Sj3.AutoSize = true;
+            this.Sj3.Location = new System.Drawing.Point(106, 7);
+            this.Sj3.Name = "Sj3";
+            this.Sj3.Size = new System.Drawing.Size(101, 19);
+            this.Sj3.TabIndex = 169;
+            this.Sj3.TabStop = true;
+            this.Sj3.Text = "Si es necesario";
+            this.Sj3.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(229, 1272);
+            this.label15.Location = new System.Drawing.Point(306, 1280);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 19);
             this.label15.TabIndex = 164;
@@ -682,7 +688,7 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(229, 1251);
+            this.label14.Location = new System.Drawing.Point(306, 1259);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 19);
             this.label14.TabIndex = 163;
@@ -693,7 +699,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(229, 1230);
+            this.label13.Location = new System.Drawing.Point(306, 1238);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 19);
             this.label13.TabIndex = 162;
@@ -704,7 +710,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(229, 1209);
+            this.label12.Location = new System.Drawing.Point(306, 1217);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(66, 19);
             this.label12.TabIndex = 161;
@@ -715,7 +721,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(227, 1179);
+            this.label11.Location = new System.Drawing.Point(304, 1187);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(115, 21);
             this.label11.TabIndex = 160;
@@ -725,7 +731,7 @@
             // 
             this.C2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C2.AutoSize = true;
-            this.C2.Location = new System.Drawing.Point(286, 1150);
+            this.C2.Location = new System.Drawing.Point(363, 1158);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(156, 19);
             this.C2.TabIndex = 174;
@@ -737,7 +743,7 @@
             // 
             this.groupBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox8.Controls.Add(this.D4);
-            this.groupBox8.Location = new System.Drawing.Point(287, 1142);
+            this.groupBox8.Location = new System.Drawing.Point(364, 1150);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(257, 26);
             this.groupBox8.TabIndex = 173;
@@ -759,7 +765,7 @@
             this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox5.Controls.Add(this.D3);
             this.groupBox5.Controls.Add(this.C1);
-            this.groupBox5.Location = new System.Drawing.Point(290, 1112);
+            this.groupBox5.Location = new System.Drawing.Point(367, 1120);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(257, 26);
             this.groupBox5.TabIndex = 172;
@@ -792,7 +798,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(229, 1149);
+            this.label10.Location = new System.Drawing.Point(306, 1157);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 19);
             this.label10.TabIndex = 171;
@@ -803,7 +809,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(226, 1117);
+            this.label9.Location = new System.Drawing.Point(303, 1125);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 19);
             this.label9.TabIndex = 170;
@@ -814,7 +820,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(229, 1095);
+            this.label8.Location = new System.Drawing.Point(306, 1103);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 21);
             this.label8.TabIndex = 169;
@@ -825,7 +831,7 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(202, 1055);
+            this.label16.Location = new System.Drawing.Point(298, 1082);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(276, 21);
             this.label16.TabIndex = 168;
@@ -837,9 +843,9 @@
             this.groupBox7.Controls.Add(this.O1);
             this.groupBox7.Controls.Add(this.St1);
             this.groupBox7.Controls.Add(this.D2);
-            this.groupBox7.Controls.Add(this.textBox3);
+            this.groupBox7.Controls.Add(this.tb3);
             this.groupBox7.Controls.Add(this.D1);
-            this.groupBox7.Location = new System.Drawing.Point(223, 958);
+            this.groupBox7.Location = new System.Drawing.Point(274, 954);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(438, 100);
             this.groupBox7.TabIndex = 177;
@@ -878,12 +884,12 @@
             this.D2.Text = "Distal Caninos";
             this.D2.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // tb3
             // 
-            this.textBox3.Location = new System.Drawing.Point(57, 76);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(407, 23);
-            this.textBox3.TabIndex = 110;
+            this.tb3.Location = new System.Drawing.Point(57, 76);
+            this.tb3.Name = "tb3";
+            this.tb3.Size = new System.Drawing.Size(407, 23);
+            this.tb3.TabIndex = 110;
             // 
             // D1
             // 
@@ -901,7 +907,7 @@
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(220, 934);
+            this.label17.Location = new System.Drawing.Point(296, 921);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(392, 21);
             this.label17.TabIndex = 176;
@@ -912,76 +918,81 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(214, 913);
+            this.label18.Location = new System.Drawing.Point(290, 900);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(247, 21);
             this.label18.TabIndex = 175;
             this.label18.Text = "6- Discrepancia espacio dentario";
             // 
-            // M8
-            // 
-            this.M8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.M8.AutoSize = true;
-            this.M8.Location = new System.Drawing.Point(234, 879);
-            this.M8.Name = "M8";
-            this.M8.Size = new System.Drawing.Size(105, 19);
-            this.M8.TabIndex = 179;
-            this.M8.TabStop = true;
-            this.M8.Text = "Mover Derecha";
-            this.M8.UseVisualStyleBackColor = true;
-            // 
             // groupBox11
             // 
             this.groupBox11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox11.Controls.Add(this.M10);
+            this.groupBox11.Controls.Add(this.groupBox21);
+            this.groupBox11.Controls.Add(this.Mo);
             this.groupBox11.Controls.Add(this.M9);
-            this.groupBox11.Controls.Add(this.M7);
             this.groupBox11.Controls.Add(this.M6);
-            this.groupBox11.Controls.Add(this.M5);
-            this.groupBox11.Controls.Add(this.MM);
-            this.groupBox11.Controls.Add(this.MM2);
-            this.groupBox11.Controls.Add(this.MM3);
-            this.groupBox11.Controls.Add(this.MM4);
-            this.groupBox11.Location = new System.Drawing.Point(230, 758);
+            this.groupBox11.Location = new System.Drawing.Point(306, 745);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(379, 138);
+            this.groupBox11.Size = new System.Drawing.Size(362, 82);
             this.groupBox11.TabIndex = 180;
             this.groupBox11.TabStop = false;
             // 
-            // M10
+            // groupBox21
             // 
-            this.M10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.M10.AutoSize = true;
-            this.M10.Location = new System.Drawing.Point(113, 121);
-            this.M10.Name = "M10";
-            this.M10.Size = new System.Drawing.Size(110, 19);
-            this.M10.TabIndex = 202;
-            this.M10.TabStop = true;
-            this.M10.Text = "Mover Izquierda";
-            this.M10.UseVisualStyleBackColor = true;
+            this.groupBox21.Controls.Add(this.mm);
+            this.groupBox21.Controls.Add(this.mm2);
+            this.groupBox21.Location = new System.Drawing.Point(222, 40);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(139, 33);
+            this.groupBox21.TabIndex = 205;
+            this.groupBox21.TabStop = false;
+            // 
+            // mm
+            // 
+            this.mm.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.mm.AutoSize = true;
+            this.mm.Location = new System.Drawing.Point(3, 8);
+            this.mm.Name = "mm";
+            this.mm.Size = new System.Drawing.Size(64, 19);
+            this.mm.TabIndex = 203;
+            this.mm.TabStop = true;
+            this.mm.Text = "1-2mm";
+            this.mm.UseVisualStyleBackColor = true;
+            this.mm.CheckedChanged += new System.EventHandler(this.radioButton12_CheckedChanged);
+            // 
+            // mm2
+            // 
+            this.mm2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.mm2.AutoSize = true;
+            this.mm2.Location = new System.Drawing.Point(71, 8);
+            this.mm2.Name = "mm2";
+            this.mm2.Size = new System.Drawing.Size(64, 19);
+            this.mm2.TabIndex = 204;
+            this.mm2.TabStop = true;
+            this.mm2.Text = "1-2mm";
+            this.mm2.UseVisualStyleBackColor = true;
+            // 
+            // Mo
+            // 
+            this.Mo.AutoSize = true;
+            this.Mo.Location = new System.Drawing.Point(2, 10);
+            this.Mo.Name = "Mo";
+            this.Mo.Size = new System.Drawing.Size(123, 19);
+            this.Mo.TabIndex = 202;
+            this.Mo.Text = "Mantener superior";
+            this.Mo.UseVisualStyleBackColor = true;
             // 
             // M9
             // 
             this.M9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.M9.AutoSize = true;
-            this.M9.Location = new System.Drawing.Point(117, 48);
+            this.M9.Location = new System.Drawing.Point(109, 48);
             this.M9.Name = "M9";
             this.M9.Size = new System.Drawing.Size(110, 19);
             this.M9.TabIndex = 201;
             this.M9.TabStop = true;
             this.M9.Text = "Mover Izquierda";
             this.M9.UseVisualStyleBackColor = true;
-            // 
-            // M7
-            // 
-            this.M7.AutoSize = true;
-            this.M7.Location = new System.Drawing.Point(4, 84);
-            this.M7.Name = "M7";
-            this.M7.Size = new System.Drawing.Size(100, 19);
-            this.M7.TabIndex = 106;
-            this.M7.TabStop = true;
-            this.M7.Text = "Mover Inferior";
-            this.M7.UseVisualStyleBackColor = true;
             // 
             // M6
             // 
@@ -994,63 +1005,12 @@
             this.M6.Text = "Mover Derecha";
             this.M6.UseVisualStyleBackColor = true;
             // 
-            // M5
-            // 
-            this.M5.AutoSize = true;
-            this.M5.Location = new System.Drawing.Point(5, 12);
-            this.M5.Name = "M5";
-            this.M5.Size = new System.Drawing.Size(123, 19);
-            this.M5.TabIndex = 104;
-            this.M5.TabStop = true;
-            this.M5.Text = "Mantener Superior";
-            this.M5.UseVisualStyleBackColor = true;
-            // 
-            // MM
-            // 
-            this.MM.AutoSize = true;
-            this.MM.Location = new System.Drawing.Point(232, 49);
-            this.MM.Name = "MM";
-            this.MM.Size = new System.Drawing.Size(65, 19);
-            this.MM.TabIndex = 97;
-            this.MM.Text = "1-2mm";
-            this.MM.UseVisualStyleBackColor = true;
-            // 
-            // MM2
-            // 
-            this.MM2.AutoSize = true;
-            this.MM2.Location = new System.Drawing.Point(297, 49);
-            this.MM2.Name = "MM2";
-            this.MM2.Size = new System.Drawing.Size(81, 19);
-            this.MM2.TabIndex = 98;
-            this.MM2.Text = "+ de 2mm";
-            this.MM2.UseVisualStyleBackColor = true;
-            // 
-            // MM3
-            // 
-            this.MM3.AutoSize = true;
-            this.MM3.Location = new System.Drawing.Point(228, 123);
-            this.MM3.Name = "MM3";
-            this.MM3.Size = new System.Drawing.Size(65, 19);
-            this.MM3.TabIndex = 102;
-            this.MM3.Text = "1-2mm";
-            this.MM3.UseVisualStyleBackColor = true;
-            // 
-            // MM4
-            // 
-            this.MM4.AutoSize = true;
-            this.MM4.Location = new System.Drawing.Point(299, 123);
-            this.MM4.Name = "MM4";
-            this.MM4.Size = new System.Drawing.Size(81, 19);
-            this.MM4.TabIndex = 103;
-            this.MM4.Text = "+ de 2mm";
-            this.MM4.UseVisualStyleBackColor = true;
-            // 
             // label19
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(210, 734);
+            this.label19.Location = new System.Drawing.Point(286, 721);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(522, 21);
             this.label19.TabIndex = 178;
@@ -1061,7 +1021,7 @@
             this.groupBox12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox12.Controls.Add(this.M4);
             this.groupBox12.Controls.Add(this.M3);
-            this.groupBox12.Location = new System.Drawing.Point(357, 706);
+            this.groupBox12.Location = new System.Drawing.Point(433, 693);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(131, 22);
             this.groupBox12.TabIndex = 182;
@@ -1094,7 +1054,7 @@
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(212, 708);
+            this.label20.Location = new System.Drawing.Point(288, 695);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(143, 21);
             this.label20.TabIndex = 181;
@@ -1105,7 +1065,7 @@
             this.groupBox13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox13.Controls.Add(this.radioButton10);
             this.groupBox13.Controls.Add(this.radioButton11);
-            this.groupBox13.Location = new System.Drawing.Point(301, 678);
+            this.groupBox13.Location = new System.Drawing.Point(377, 665);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(131, 22);
             this.groupBox13.TabIndex = 185;
@@ -1138,7 +1098,7 @@
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(430, 687);
+            this.label21.Location = new System.Drawing.Point(506, 674);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(223, 13);
             this.label21.TabIndex = 184;
@@ -1149,7 +1109,7 @@
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label22.Location = new System.Drawing.Point(212, 680);
+            this.label22.Location = new System.Drawing.Point(288, 667);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(90, 21);
             this.label22.TabIndex = 183;
@@ -1158,36 +1118,37 @@
             // groupBox14
             // 
             this.groupBox14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox14.Controls.Add(this.radioButton12);
-            this.groupBox14.Controls.Add(this.radioButton13);
-            this.groupBox14.Location = new System.Drawing.Point(212, 471);
+            this.groupBox14.Controls.Add(this.ataches_nocolocar);
+            this.groupBox14.Controls.Add(this.ataches_colocar);
+            this.groupBox14.Location = new System.Drawing.Point(288, 458);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(511, 43);
             this.groupBox14.TabIndex = 188;
             this.groupBox14.TabStop = false;
             // 
-            // radioButton12
+            // ataches_nocolocar
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(0, 24);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(511, 19);
-            this.radioButton12.TabIndex = 98;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "No colocar ataches en estos dientes especificos(Coronas,Restauracion en caras ves" +
+            this.ataches_nocolocar.AutoSize = true;
+            this.ataches_nocolocar.Location = new System.Drawing.Point(0, 24);
+            this.ataches_nocolocar.Name = "ataches_nocolocar";
+            this.ataches_nocolocar.Size = new System.Drawing.Size(511, 19);
+            this.ataches_nocolocar.TabIndex = 98;
+            this.ataches_nocolocar.TabStop = true;
+            this.ataches_nocolocar.Text = "No colocar ataches en estos dientes especificos(Coronas,Restauracion en caras ves" +
     "tibulares):";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.ataches_nocolocar.UseVisualStyleBackColor = true;
             // 
-            // radioButton13
+            // ataches_colocar
             // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(1, 1);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(176, 19);
-            this.radioButton13.TabIndex = 99;
-            this.radioButton13.TabStop = true;
-            this.radioButton13.Text = "Colocar donde sea necesario";
-            this.radioButton13.UseVisualStyleBackColor = true;
+            this.ataches_colocar.AutoSize = true;
+            this.ataches_colocar.Location = new System.Drawing.Point(1, 1);
+            this.ataches_colocar.Name = "ataches_colocar";
+            this.ataches_colocar.Size = new System.Drawing.Size(176, 19);
+            this.ataches_colocar.TabIndex = 99;
+            this.ataches_colocar.TabStop = true;
+            this.ataches_colocar.Text = "Colocar donde sea necesario";
+            this.ataches_colocar.UseVisualStyleBackColor = true;
+            this.ataches_colocar.CheckedChanged += new System.EventHandler(this.ataches_colocar_CheckedChanged);
             // 
             // groupBox15
             // 
@@ -1225,7 +1186,7 @@
             this.groupBox15.Controls.Add(this.CBB11);
             this.groupBox15.Controls.Add(this.CBB12);
             this.groupBox15.Controls.Add(this.pictureBox3);
-            this.groupBox15.Location = new System.Drawing.Point(310, 513);
+            this.groupBox15.Location = new System.Drawing.Point(386, 500);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(342, 164);
             this.groupBox15.TabIndex = 187;
@@ -1535,7 +1496,7 @@
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(173, 447);
+            this.label23.Location = new System.Drawing.Point(249, 434);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(91, 21);
             this.label23.TabIndex = 186;
@@ -1546,7 +1507,7 @@
             this.groupBox16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox16.Controls.Add(this.dientes_1);
             this.groupBox16.Controls.Add(this.Lim_Ninguna);
-            this.groupBox16.Location = new System.Drawing.Point(215, 226);
+            this.groupBox16.Location = new System.Drawing.Point(291, 213);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(594, 40);
             this.groupBox16.TabIndex = 199;
@@ -1609,7 +1570,7 @@
             this.groupBox17.Controls.Add(this.CB11);
             this.groupBox17.Controls.Add(this.CB12);
             this.groupBox17.Controls.Add(this.pictureBox2);
-            this.groupBox17.Location = new System.Drawing.Point(317, 291);
+            this.groupBox17.Location = new System.Drawing.Point(393, 278);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(342, 164);
             this.groupBox17.TabIndex = 198;
@@ -1919,7 +1880,7 @@
             this.groupBox18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox18.Controls.Add(this.M);
             this.groupBox18.Controls.Add(this.F);
-            this.groupBox18.Location = new System.Drawing.Point(290, 140);
+            this.groupBox18.Location = new System.Drawing.Point(366, 127);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(69, 18);
             this.groupBox18.TabIndex = 197;
@@ -1950,25 +1911,25 @@
             // groupBox19
             // 
             this.groupBox19.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox19.Controls.Add(this.sI1);
+            this.groupBox19.Controls.Add(this.sl1);
             this.groupBox19.Controls.Add(this.sS1);
             this.groupBox19.Controls.Add(this.A1);
-            this.groupBox19.Location = new System.Drawing.Point(365, 169);
+            this.groupBox19.Location = new System.Drawing.Point(441, 156);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(271, 19);
             this.groupBox19.TabIndex = 196;
             this.groupBox19.TabStop = false;
             // 
-            // sI1
+            // sl1
             // 
-            this.sI1.AutoSize = true;
-            this.sI1.Location = new System.Drawing.Point(157, 0);
-            this.sI1.Name = "sI1";
-            this.sI1.Size = new System.Drawing.Size(89, 19);
-            this.sI1.TabIndex = 96;
-            this.sI1.TabStop = true;
-            this.sI1.Text = "Solo Inferior";
-            this.sI1.UseVisualStyleBackColor = true;
+            this.sl1.AutoSize = true;
+            this.sl1.Location = new System.Drawing.Point(157, 0);
+            this.sl1.Name = "sl1";
+            this.sl1.Size = new System.Drawing.Size(89, 19);
+            this.sl1.TabIndex = 96;
+            this.sl1.TabStop = true;
+            this.sl1.Text = "Solo Inferior";
+            this.sl1.UseVisualStyleBackColor = true;
             // 
             // sS1
             // 
@@ -1997,7 +1958,7 @@
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(180, 202);
+            this.label24.Location = new System.Drawing.Point(256, 189);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(407, 21);
             this.label24.TabIndex = 195;
@@ -2008,7 +1969,7 @@
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(180, 163);
+            this.label25.Location = new System.Drawing.Point(256, 150);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(184, 21);
             this.label25.TabIndex = 194;
@@ -2019,7 +1980,7 @@
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(365, 135);
+            this.label26.Location = new System.Drawing.Point(441, 122);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(164, 21);
             this.label26.TabIndex = 193;
@@ -2030,7 +1991,7 @@
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(244, 135);
+            this.label27.Location = new System.Drawing.Point(320, 122);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(50, 21);
             this.label27.TabIndex = 191;
@@ -2039,7 +2000,7 @@
             // txtPaciente
             // 
             this.txtPaciente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPaciente.Location = new System.Drawing.Point(486, 109);
+            this.txtPaciente.Location = new System.Drawing.Point(562, 96);
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(193, 23);
             this.txtPaciente.TabIndex = 190;
@@ -2049,7 +2010,7 @@
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(306, 109);
+            this.label28.Location = new System.Drawing.Point(382, 96);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(169, 21);
             this.label28.TabIndex = 189;
@@ -2059,7 +2020,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label29.Location = new System.Drawing.Point(762, 1687);
+            this.label29.Location = new System.Drawing.Point(762, 1756);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(12, 15);
             this.label29.TabIndex = 200;
@@ -2068,18 +2029,102 @@
             // 
             // datePicker
             // 
+            this.datePicker.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datePicker.Location = new System.Drawing.Point(559, 138);
+            this.datePicker.Location = new System.Drawing.Point(609, 125);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(200, 23);
             this.datePicker.TabIndex = 201;
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox20.Controls.Add(this.groupBox22);
+            this.groupBox20.Controls.Add(this.Mo2);
+            this.groupBox20.Controls.Add(this.M01);
+            this.groupBox20.Controls.Add(this.M0);
+            this.groupBox20.Location = new System.Drawing.Point(305, 815);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(379, 82);
+            this.groupBox20.TabIndex = 203;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Enter += new System.EventHandler(this.groupBox20_Enter);
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.mm3);
+            this.groupBox22.Controls.Add(this.mm4);
+            this.groupBox22.Location = new System.Drawing.Point(220, 43);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(139, 33);
+            this.groupBox22.TabIndex = 206;
+            this.groupBox22.TabStop = false;
+            // 
+            // mm3
+            // 
+            this.mm3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.mm3.AutoSize = true;
+            this.mm3.Location = new System.Drawing.Point(0, 8);
+            this.mm3.Name = "mm3";
+            this.mm3.Size = new System.Drawing.Size(64, 19);
+            this.mm3.TabIndex = 203;
+            this.mm3.TabStop = true;
+            this.mm3.Text = "1-2mm";
+            this.mm3.UseVisualStyleBackColor = true;
+            // 
+            // mm4
+            // 
+            this.mm4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.mm4.AutoSize = true;
+            this.mm4.Location = new System.Drawing.Point(69, 8);
+            this.mm4.Name = "mm4";
+            this.mm4.Size = new System.Drawing.Size(64, 19);
+            this.mm4.TabIndex = 204;
+            this.mm4.TabStop = true;
+            this.mm4.Text = "1-2mm";
+            this.mm4.UseVisualStyleBackColor = true;
+            // 
+            // Mo2
+            // 
+            this.Mo2.AutoSize = true;
+            this.Mo2.Location = new System.Drawing.Point(0, 12);
+            this.Mo2.Name = "Mo2";
+            this.Mo2.Size = new System.Drawing.Size(118, 19);
+            this.Mo2.TabIndex = 203;
+            this.Mo2.Text = "Mantener Inferior";
+            this.Mo2.UseVisualStyleBackColor = true;
+            // 
+            // M01
+            // 
+            this.M01.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.M01.AutoSize = true;
+            this.M01.Location = new System.Drawing.Point(108, 50);
+            this.M01.Name = "M01";
+            this.M01.Size = new System.Drawing.Size(110, 19);
+            this.M01.TabIndex = 202;
+            this.M01.TabStop = true;
+            this.M01.Text = "Mover Izquierda";
+            this.M01.UseVisualStyleBackColor = true;
+            // 
+            // M0
+            // 
+            this.M0.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.M0.AutoSize = true;
+            this.M0.Location = new System.Drawing.Point(0, 50);
+            this.M0.Name = "M0";
+            this.M0.Size = new System.Drawing.Size(105, 19);
+            this.M0.TabIndex = 179;
+            this.M0.TabStop = true;
+            this.M0.Text = "Mover Derecha";
+            this.M0.UseVisualStyleBackColor = true;
             // 
             // Form3
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1365, 1061);
+            this.ClientSize = new System.Drawing.Size(1167, 1061);
+            this.Controls.Add(this.groupBox20);
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.groupBox16);
@@ -2100,7 +2145,6 @@
             this.Controls.Add(this.label22);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.M8);
             this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.groupBox7);
@@ -2165,6 +2209,8 @@
             this.groupBox7.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
@@ -2183,6 +2229,10 @@
             this.groupBox18.PerformLayout();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2204,31 +2254,31 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RadioButton N2;
-        private System.Windows.Forms.RadioButton P2;
-        private System.Windows.Forms.RadioButton S2;
+        private System.Windows.Forms.RadioButton nn5;
+        private System.Windows.Forms.RadioButton Pp5;
+        private System.Windows.Forms.RadioButton Sj5;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RadioButton P1;
-        private System.Windows.Forms.RadioButton S1;
-        private System.Windows.Forms.RadioButton N1;
+        private System.Windows.Forms.RadioButton Pp4;
+        private System.Windows.Forms.RadioButton Sj4;
+        private System.Windows.Forms.RadioButton nn4;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.RadioButton N3;
-        private System.Windows.Forms.RadioButton P3;
-        private System.Windows.Forms.RadioButton S3;
+        private System.Windows.Forms.RadioButton nn6;
+        private System.Windows.Forms.RadioButton Pp6;
+        private System.Windows.Forms.RadioButton Sj6;
         private System.Windows.Forms.RadioButton M2;
         private System.Windows.Forms.RadioButton M1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton nn2;
+        private System.Windows.Forms.RadioButton Pp2;
+        private System.Windows.Forms.RadioButton Sj2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton Pp1;
+        private System.Windows.Forms.RadioButton Sj1;
+        private System.Windows.Forms.RadioButton nn1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton S4;
+        private System.Windows.Forms.RadioButton nn3;
+        private System.Windows.Forms.RadioButton Pp3;
+        private System.Windows.Forms.RadioButton Sj3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -2248,19 +2298,12 @@
         private System.Windows.Forms.RadioButton O1;
         private System.Windows.Forms.RadioButton St1;
         private System.Windows.Forms.RadioButton D2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tb3;
         private System.Windows.Forms.RadioButton D1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.RadioButton M8;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.RadioButton M7;
         private System.Windows.Forms.RadioButton M6;
-        private System.Windows.Forms.RadioButton M5;
-        private System.Windows.Forms.CheckBox MM;
-        private System.Windows.Forms.CheckBox MM2;
-        private System.Windows.Forms.CheckBox MM3;
-        private System.Windows.Forms.CheckBox MM4;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.RadioButton M4;
@@ -2272,8 +2315,8 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.RadioButton ataches_nocolocar;
+        private System.Windows.Forms.RadioButton ataches_colocar;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.CheckBox CBB17;
         private System.Windows.Forms.CheckBox CBB1;
@@ -2350,7 +2393,7 @@
         private System.Windows.Forms.RadioButton M;
         private System.Windows.Forms.RadioButton F;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.RadioButton sI1;
+        private System.Windows.Forms.RadioButton sl1;
         private System.Windows.Forms.RadioButton sS1;
         private System.Windows.Forms.RadioButton A1;
         private System.Windows.Forms.Label label24;
@@ -2361,8 +2404,18 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.RadioButton M10;
         private System.Windows.Forms.RadioButton M9;
         private System.Windows.Forms.DateTimePicker datePicker;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.RadioButton M01;
+        private System.Windows.Forms.RadioButton M0;
+        private System.Windows.Forms.CheckBox Mo;
+        private System.Windows.Forms.CheckBox Mo2;
+        private System.Windows.Forms.RadioButton mm;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.RadioButton mm2;
+        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.RadioButton mm3;
+        private System.Windows.Forms.RadioButton mm4;
     }
 }
