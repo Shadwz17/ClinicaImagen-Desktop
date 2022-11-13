@@ -26,6 +26,7 @@ namespace ClinicaImagen
         {
             InitializeComponent();
             dgVerificados.DataSource = usuariosVerificados();
+            dataGridView1.DataSource = usuariosnoVerificados();
             dgFormularios.DataSource = MostrarFormularios();
             datosUsuario();
             lblCorreo.Text = $"Correo: \n{datos[0]}";
@@ -74,7 +75,22 @@ namespace ClinicaImagen
             DataTable usuarios = new DataTable();
             using (MySqlConnection connection =  new MySqlConnection(MainFunc.connString))
             {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT correo, nombre from usuarios WHERE verificado=1", connection))
+                using (MySqlCommand cmd = new MySqlCommand("SELECT nombre, correo from usuarios WHERE verificado=1", connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    usuarios.Load(reader);
+                }
+            }
+            return usuarios;
+        }
+        private DataTable usuariosnoVerificados()
+        {
+            DataTable usuarios = new DataTable();
+            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("SELECT nombre, correo from usuarios WHERE verificado=0", connection))
                 {
                     connection.Open();
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -227,6 +243,11 @@ namespace ClinicaImagen
             formGrafico form = new formGrafico();
             this.Hide();
             form.Show();
+        }
+
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

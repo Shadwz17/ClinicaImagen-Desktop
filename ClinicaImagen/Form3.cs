@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using static ClinicaImagen.FormLogin;
 using static System.Net.WebRequestMethods;
 using File = System.IO.File;
+using System.Net.Mime;
 
 namespace ClinicaImagen
 {
@@ -274,7 +275,7 @@ namespace ClinicaImagen
 
 
 
-            MainFunc.Email(MainFunc.correoAdmin, "Nuevo formulario - Clinica Imagen", $"{(string)reader["nombre"]}, ha enviado un nuevo formulario.");
+            MainFunc.Email(MainFunc.correoAdmin, "Nuevo formulario - Clinica Imagen", $"{(string)reader["nombre"]}, ha enviado un nuevo formulario,$\"{(string)reader["ruta"]}.");
             reader.Close();
             String fechaActual = DateTime.Now.ToString("dd-MM-yyyy");
             string archivoAlTerminar = $"\\ClinicaImagenForm-{fechaActual}-{txtPaciente.Text}.pdf";
@@ -290,6 +291,11 @@ namespace ClinicaImagen
                 cmd.Parameters.AddWithValue("@archivo", contents);
                 reader2 = cmd.ExecuteReader();
             }
+
+
+
+
+
 
             connection.Close();
             PanelDoctor formp = new PanelDoctor();
