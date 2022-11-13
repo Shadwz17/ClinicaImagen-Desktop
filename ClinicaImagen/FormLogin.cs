@@ -83,7 +83,12 @@ namespace ClinicaImagen
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
+          
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+  this.Hide();
             ManualUsuario Manual = new ManualUsuario();
             Manual.Show();
         }
