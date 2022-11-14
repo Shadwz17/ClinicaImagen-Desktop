@@ -188,5 +188,6 @@
         private System.Windows.Forms.Button btnAgregarPaciente;
         private System.Windows.Forms.DataGridView dgvEntrevistas;
         private System.Windows.Forms.Button btnEntrevistas;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

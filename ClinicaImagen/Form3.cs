@@ -19,6 +19,7 @@ namespace ClinicaImagen
 {
     public partial class Form3 : Form
     {
+        
         MySqlCommand cmd;
         public Form3()
         {
@@ -27,16 +28,18 @@ namespace ClinicaImagen
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            PanelDoctor paneldocto = new PanelDoctor();
             this.Hide();
-            form2.Show();
+            paneldocto.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
+           
+
             MySqlConnection connection = new MySqlConnection(MainFunc.connString);
             connection.Open();
-
             MessageBox.Show(informacion.correoLogin);
             var loginQuery = new MySqlCommand($"SELECT id, nombre FROM doctor WHERE email=\"{informacion.correoLogin}\"", connection);
             var reader = loginQuery.ExecuteReader();
@@ -275,11 +278,12 @@ namespace ClinicaImagen
 
 
 
-            MainFunc.Email(MainFunc.correoAdmin, "Nuevo formulario - Clinica Imagen", $"{(string)reader["nombre"]}, ha enviado un nuevo formulario,$\"{(string)reader["ruta"]}.");
+            MainFunc.Email(MainFunc.correoAdmin, "Nuevo formulario - Clinica Imagen", $"{(string)reader["nombre"]}, ha enviado un nuevo formulario.");
             reader.Close();
             String fechaActual = DateTime.Now.ToString("dd-MM-yyyy");
             string archivoAlTerminar = $"\\ClinicaImagenForm-{fechaActual}-{txtPaciente.Text}.pdf";
             doc.SaveAs(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + archivoAlTerminar);
+
 
             FileStream fstream = File.OpenRead(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + archivoAlTerminar);
             byte[] contents = new byte[fstream.Length];

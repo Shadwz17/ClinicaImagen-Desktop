@@ -71,6 +71,10 @@ namespace ClinicaImagen
         private void btnAgregarPaciente_Click(object sender, EventArgs e)
         {
             MessageBox.Show(dgvrowValue);
+            Form1 form2 = new Form1();
+            this.Hide();
+            form2.Show();
+                    
         }
 
         private void btnEntrevistas_Click(object sender, EventArgs e)
@@ -83,12 +87,17 @@ namespace ClinicaImagen
                                                 $"AND idD=(SELECT id FROM doctor WHERE email=\"{FormLogin.informacion.correoLogin}\")  ", conx);
             MySqlDataReader reader = cmd.ExecuteReader();
             resultados.Load(reader);
-            dgvEntrevistas.DataSource = resultados;
+            
         }
 
         private void dgvEntrevistas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

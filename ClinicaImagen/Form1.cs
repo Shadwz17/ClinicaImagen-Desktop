@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace ClinicaImagen
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -34,9 +35,7 @@ namespace ClinicaImagen
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form2 form2 = new Form2();
-            form2.Show();
+           
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
@@ -47,6 +46,32 @@ namespace ClinicaImagen
         private void checkBox46_CheckedChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            MySqlConnection connection = new MySqlConnection(MainFunc.connString);
+            string nombre = txtNombre.Text;
+            string direccion = txtCorreo.Text;
+            string telefono = txtPwd.Text;
+            string cedula = txtRepPwd.Text;
+            connection.Open();
+            
+            var nuevopaciente = new MySqlCommand($"INSERT INTO paciente (nombre, direccion, telefono,cedula) VALUES (\"{nombre}\", \"{direccion}\", \"{telefono}\", \"{cedula}\")", connection);
+            nuevopaciente.ExecuteNonQuery();
+            MessageBox.Show("Paciente creado correctamente", "Paciente creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
+            PanelDoctor PanelDoctor = new PanelDoctor();
+            PanelDoctor.Show();
+            
+
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PanelDoctor PanelDoctor = new PanelDoctor();
+            PanelDoctor.Show();
         }
     }
 }
