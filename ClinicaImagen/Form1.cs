@@ -13,6 +13,7 @@ namespace ClinicaImagen
 {
     public partial class Form1 : Form
     {
+        bool Genero;
         public Form1()
         {
             InitializeComponent();
@@ -55,9 +56,17 @@ namespace ClinicaImagen
             string direccion = txtCorreo.Text;
             string telefono = txtPwd.Text;
             string cedula = txtRepPwd.Text;
+            string fec_nac = datePicker.Value.ToString("yyyy-MM-dd");
+
+            MySqlConnection conx2 = new MySqlConnection(MainFunc.connString);
+            conx2.Open();
+            MySqlCommand correoCmd = new MySqlCommand($"SELECT id FROM doctor WHERE email=\"{FormLogin.informacion.correoLogin}\"", conx2);
+            var resultados = correoCmd.ExecuteReader();
+            resultados.Read();
+            int idDoctor = (int)resultados["id"];
             connection.Open();
-            
-            var nuevopaciente = new MySqlCommand($"INSERT INTO paciente (nombre, direccion, telefono,cedula) VALUES (\"{nombre}\", \"{direccion}\", \"{telefono}\", \"{cedula}\")", connection);
+
+            var nuevopaciente = new MySqlCommand($"INSERT INTO paciente (nombre, direccion, telefono,cedula, sexo, idD) VALUES (\"{nombre}\", \"{direccion}\", \"{telefono}\", \"{cedula}\", \"{Genero}\", \"{idDoctor}\")", connection);
             nuevopaciente.ExecuteNonQuery();
             MessageBox.Show("Paciente creado correctamente", "Paciente creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Hide();
@@ -72,6 +81,16 @@ namespace ClinicaImagen
             this.Hide();
             PanelDoctor PanelDoctor = new PanelDoctor();
             PanelDoctor.Show();
+        }
+
+        private void rbM_CheckedChanged(object sender, EventArgs e)
+        {
+            Genero = true;
+        }
+
+        private void rbF_CheckedChanged(object sender, EventArgs e)
+        {
+            Genero = false;
         }
     }
 }

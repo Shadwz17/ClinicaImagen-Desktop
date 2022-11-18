@@ -37,7 +37,6 @@
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
             this.btnAgregarPaciente = new System.Windows.Forms.Button();
             this.dgvEntrevistas = new System.Windows.Forms.DataGridView();
-            this.btnEntrevistas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -126,6 +125,7 @@
             // 
             this.dgvEntrevistas.AllowUserToAddRows = false;
             this.dgvEntrevistas.AllowUserToDeleteRows = false;
+            this.dgvEntrevistas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvEntrevistas.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dgvEntrevistas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEntrevistas.GridColor = System.Drawing.SystemColors.Info;
@@ -137,23 +137,12 @@
             this.dgvEntrevistas.TabIndex = 103;
             this.dgvEntrevistas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEntrevistas_CellContentClick);
             // 
-            // btnEntrevistas
-            // 
-            this.btnEntrevistas.Location = new System.Drawing.Point(299, 386);
-            this.btnEntrevistas.Name = "btnEntrevistas";
-            this.btnEntrevistas.Size = new System.Drawing.Size(129, 23);
-            this.btnEntrevistas.TabIndex = 104;
-            this.btnEntrevistas.Text = "Mostrar Entrevistas";
-            this.btnEntrevistas.UseVisualStyleBackColor = true;
-            this.btnEntrevistas.Click += new System.EventHandler(this.btnEntrevistas_Click);
-            // 
             // PanelDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(536, 508);
-            this.Controls.Add(this.btnEntrevistas);
             this.Controls.Add(this.dgvEntrevistas);
             this.Controls.Add(this.btnAgregarPaciente);
             this.Controls.Add(this.dgvPacientes);
@@ -167,6 +156,7 @@
             this.Name = "PanelDoctor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClinicaImagen - Usuario";
+            this.Load += new System.EventHandler(this.PanelDoctor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -187,7 +177,6 @@
         private System.Windows.Forms.DataGridView dgvPacientes;
         private System.Windows.Forms.Button btnAgregarPaciente;
         private System.Windows.Forms.DataGridView dgvEntrevistas;
-        private System.Windows.Forms.Button btnEntrevistas;
         private System.Windows.Forms.Button btnActualizar;
     }
 }

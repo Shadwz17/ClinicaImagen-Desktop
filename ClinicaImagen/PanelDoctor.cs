@@ -28,7 +28,7 @@ namespace ClinicaImagen
         }
 
         DataTable resultados = new DataTable();
-        string _dgvrowValue;
+        string? _dgvrowValue;
         public string dgvrowValue
         {
             get { return _dgvrowValue; }
@@ -60,12 +60,13 @@ namespace ClinicaImagen
             if (columnindex == 0)
             {
                 _dgvrowValue = dgvPacientes.CurrentRow.Cells[0].Value.ToString();
+                MostrarEntrevistas();
             }
         }
 
         private void dgvEntrevistas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Descargar desde panel doctor - TODO
+            dgvEntrevistas.DataSource = MostrarEntrevistas();
         }
 
         private void btnAgregarPaciente_Click(object sender, EventArgs e)
@@ -79,15 +80,23 @@ namespace ClinicaImagen
 
         private void btnEntrevistas_Click(object sender, EventArgs e)
         {
-            dgvEntrevistas.Rows.Clear();
-            dgvEntrevistas.Columns.Clear();
-            MySqlConnection conx = new MySqlConnection(MainFunc.connString);
-            conx.Open();
-            MySqlCommand cmd = new MySqlCommand($"SELECT fecha FROM entrevista WHERE idP=(SELECT id FROM paciente WHERE nombre=\"{dgvrowValue}\") " +
-                                                $"AND idD=(SELECT id FROM doctor WHERE email=\"{FormLogin.informacion.correoLogin}\")  ", conx);
-            MySqlDataReader reader = cmd.ExecuteReader();
-            resultados.Load(reader);
-            
+
+        }
+
+        private DataTable MostrarEntrevistas()
+        {
+            DataTable entrevistas = new DataTable();    
+            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand($"SELECT fecha FROM entrevista WHERE idP=(SELECT id FROM paciente WHERE nombre=\"{dgvrowValue}\") AND idD=(SELECT id FROM doctor WHERE email=\"{FormLogin.informacion.correoLogin}\")", connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    entrevistas.Load(reader);
+                }
+            }
+            return entrevistas;
         }
 
         private void dgvEntrevistas_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -98,6 +107,11 @@ namespace ClinicaImagen
         private void btnActualizar_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void PanelDoctor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
