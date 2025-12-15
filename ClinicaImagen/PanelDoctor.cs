@@ -1,4 +1,3 @@
-﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicaImagen.Services;
 
 namespace ClinicaImagen
 {
     public partial class PanelDoctor : Form
     {
         public PanelDoctor()
+        private readonly IPacienteService _pacienteService;
+
+        public PanelDoctor(IPacienteService? pacienteService = null)
         {
             InitializeComponent();
+            _pacienteService = pacienteService ?? AppServices.PacienteService ?? throw new InvalidOperationException("PacienteService no configurado.");
             dgvPacientes.ScrollBars = ScrollBars.Horizontal;
             dgvPacientes.DataSource = Pacientes();
             UIStyles.ApplyFormStyles(this);
@@ -41,34 +45,24 @@ namespace ClinicaImagen
             }
         }
 
-        DataTable Pacientes()
+        private async Task<DataTable> PacientesAsync()
         {
-            DataTable pacientes = new DataTable();
-            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
-            {
-                using (MySqlCommand cmd = new MySqlCommand($"SELECT nombre, direccion, telefono FROM paciente WHERE idD=(SELECT id FROM doctor WHERE email=\"{FormLogin.informacion.correoLogin}\")", connection))
-                {
-                    connection.Open();
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    pacientes.Load(reader);
-                }
-                return pacientes;
-            }
+            return await _pacienteService.ObtenerPacientesAsync(FormLogin.informacion.correoLogin ?? string.Empty);
         }
 
-        private void dgvPacientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        private async void dgvPacientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int columnindex = dgvPacientes.CurrentCell.ColumnIndex;
             if (columnindex == 0)
             {
                 _dgvrowValue = dgvPacientes.CurrentRow.Cells[0].Value.ToString();
-                MostrarEntrevistas();
+                await MostrarEntrevistasAsync();
             }
         }
 
-        private void dgvEntrevistas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private async void dgvEntrevistas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvEntrevistas.DataSource = MostrarEntrevistas();
+            await MostrarEntrevistasAsync();
         }
 
         private void btnAgregarPaciente_Click(object sender, EventArgs e)
@@ -84,19 +78,12 @@ namespace ClinicaImagen
 
         }
 
-        private DataTable MostrarEntrevistas()
+        private async Task<DataTable> MostrarEntrevistasAsync()
         {
-            DataTable entrevistas = new DataTable();    
-            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
-            {
-                using (MySqlCommand cmd = new MySqlCommand($"SELECT fecha FROM entrevista WHERE idP=(SELECT id FROM paciente WHERE nombre=\"{dgvrowValue}\") AND idD=(SELECT id FROM doctor WHERE email=\"{FormLogin.informacion.correoLogin}\")", connection))
-                {
-                    connection.Open();
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    entrevistas.Load(reader);
-                }
-            }
+            ToggleEntrevistasLoading(true);
+            DataTable entrevistas = await _pacienteService.ObtenerEntrevistasAsync(dgvrowValue ?? string.Empty, FormLogin.informacion.correoLogin ?? string.Empty);
+            dgvEntrevistas.DataSource = entrevistas;
+            ToggleEntrevistasLoading(false);
             return entrevistas;
         }
 
@@ -110,9 +97,26 @@ namespace ClinicaImagen
           
         }
 
-        private void PanelDoctor_Load(object sender, EventArgs e)
+        private async void PanelDoctor_Load(object sender, EventArgs e)
         {
+            await CargarPacientesAsync();
+        }
 
+        private async Task CargarPacientesAsync()
+        {
+            TogglePacientesLoading(true);
+            dgvPacientes.DataSource = await PacientesAsync();
+            TogglePacientesLoading(false);
+        }
+
+        private void TogglePacientesLoading(bool isLoading)
+        {
+            lblPacientesLoading.Visible = isLoading;
+        }
+
+        private void ToggleEntrevistasLoading(bool isLoading)
+        {
+            lblEntrevistasLoading.Visible = isLoading;
         }
     }
 }
