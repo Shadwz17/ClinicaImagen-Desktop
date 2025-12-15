@@ -247,13 +247,35 @@
             this.pictureBox1.Size = new System.Drawing.Size(308, 1269);
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
-            // 
+            //
+            // lblUsuariosLoading
+            //
+            this.lblUsuariosLoading.AutoSize = true;
+            this.lblUsuariosLoading.Location = new System.Drawing.Point(12, 549);
+            this.lblUsuariosLoading.Name = "lblUsuariosLoading";
+            this.lblUsuariosLoading.Size = new System.Drawing.Size(94, 15);
+            this.lblUsuariosLoading.TabIndex = 103;
+            this.lblUsuariosLoading.Text = "Cargando datos";
+            this.lblUsuariosLoading.Visible = false;
+            //
+            // lblFormulariosLoading
+            //
+            this.lblFormulariosLoading.AutoSize = true;
+            this.lblFormulariosLoading.Location = new System.Drawing.Point(645, 96);
+            this.lblFormulariosLoading.Name = "lblFormulariosLoading";
+            this.lblFormulariosLoading.Size = new System.Drawing.Size(94, 15);
+            this.lblFormulariosLoading.TabIndex = 104;
+            this.lblFormulariosLoading.Text = "Cargando datos";
+            this.lblFormulariosLoading.Visible = false;
+            //
             // Paneladmin
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1149, 637);
+            this.Controls.Add(this.lblFormulariosLoading);
+            this.Controls.Add(this.lblUsuariosLoading);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
@@ -304,5 +326,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblUsuariosLoading;
+        private System.Windows.Forms.Label lblFormulariosLoading;
     }
 }

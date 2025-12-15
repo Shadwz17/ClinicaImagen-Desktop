@@ -16,15 +16,16 @@ using MailAddress = System.Net.Mail.MailAddress;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using ClinicaImagen.Services;
 
 namespace ClinicaImagen
 {
     public partial class Paneladmin : Form
     {
         string inputFile;
-        string[] datosDoctor = new string[2];
         string[] datos = new string[2];
-        public Paneladmin()
+        private readonly IUsuarioService _usuarioService;
+        public Paneladmin(IUsuarioService? usuarioService = null)
         {
             InitializeComponent();
             dgVerificados.DataSource = usuariosVerificados();
@@ -62,72 +63,8 @@ namespace ClinicaImagen
                     }
                 }
             }
-        }
+            _usuarioService = usuarioService ?? AppServices.UsuarioService ?? throw new InvalidOperationException("UsuarioService no configurado.");
 
-        private void datosDoctorF()
-        {
-            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
-            {
-                using (MySqlCommand cmd = new MySqlCommand($"SELECT email, nombre from doctor", connection))
-                {
-                    connection.Open();
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    for (int i = 0; i < 2; i++)
-                    {
-                        reader.Read();
-                        datosDoctor[i] = reader.GetString(i);
-                    }
-                }
-            }
-        }
-
-        private DataTable usuariosVerificados()
-        {
-            DataTable usuarios = new DataTable();
-            using (MySqlConnection connection =  new MySqlConnection(MainFunc.connString))
-            {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT nombre, correo from usuarios WHERE verificado=1", connection))
-                {
-                    connection.Open();
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    usuarios.Load(reader);
-                }
-            }
-            return usuarios;
-        }
-        private DataTable usuariosnoVerificados()
-        {
-            DataTable usuarios = new DataTable();
-            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
-            {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT nombre, correo from usuarios WHERE verificado=0", connection))
-                {
-                    connection.Open();
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    usuarios.Load(reader);
-                }
-            }
-            return usuarios;
-        }
-
-        private DataTable MostrarFormularios()
-        {
-            datosDoctorF();
-            DataTable usuarios = new DataTable();
-            using (MySqlConnection connection = new MySqlConnection(MainFunc.connString))
-            {
-                using (MySqlCommand cmd = new MySqlCommand($"SELECT num_form AS \"Numero de Formulario\", fecha AS \"Ingresado\" from formulario", connection))
-                {
-                    connection.Open();
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    usuarios.Load(reader);
-                }
-            }
-            return usuarios;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -135,9 +72,48 @@ namespace ClinicaImagen
 
         }
 
-        private void Paneladmin_Load(object sender, EventArgs e)
+        private async void Paneladmin_Load(object sender, EventArgs e)
         {
+            await InicializarAsync();
+        }
 
+        private async Task InicializarAsync()
+        {
+            await datosUsuario();
+            await CargarUsuariosAsync();
+            await CargarFormulariosAsync();
+        }
+
+        private async Task datosUsuario()
+        {
+            datos = await _usuarioService.ObtenerDatosUsuarioAsync(FormLogin.informacion.correoLogin ?? string.Empty);
+            lblCorreo.Text = $"Correo: \n{datos[0]}";
+            lblUsuario.Text = $"Usuario: \n{datos[1]}";
+        }
+
+        private async Task CargarUsuariosAsync()
+        {
+            ToggleUsuariosLoading(true);
+            dgVerificados.DataSource = await _usuarioService.ObtenerUsuariosVerificadosAsync();
+            dataGridView1.DataSource = await _usuarioService.ObtenerUsuariosNoVerificadosAsync();
+            ToggleUsuariosLoading(false);
+        }
+
+        private async Task CargarFormulariosAsync()
+        {
+            ToggleFormulariosLoading(true);
+            dgFormularios.DataSource = await _usuarioService.ObtenerFormulariosAsync();
+            ToggleFormulariosLoading(false);
+        }
+
+        private void ToggleUsuariosLoading(bool isLoading)
+        {
+            lblUsuariosLoading.Visible = isLoading;
+        }
+
+        private void ToggleFormulariosLoading(bool isLoading)
+        {
+            lblFormulariosLoading.Visible = isLoading;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -155,7 +131,7 @@ namespace ClinicaImagen
 
         }
 
-        private void btnVerificar_Click(object sender, EventArgs e)
+        private async void btnVerificar_Click(object sender, EventArgs e)
         {
             string correo;
             correo = Interaction.InputBox("Ingrese el correo a verificar: ", "Verificador");
@@ -193,12 +169,16 @@ namespace ClinicaImagen
             }
         }
         private void btnActualizar_Click(object sender, EventArgs e)
+                await _usuarioService.ActualizarVerificacionAsync(correo);
+                await CargarUsuariosAsync();
+            }
+        private async void btnActualizar_Click(object sender, EventArgs e)
         {
-            dgVerificados.DataSource = usuariosVerificados();
-            dgFormularios.DataSource = MostrarFormularios();
+            await CargarUsuariosAsync();
+            await CargarFormulariosAsync();
         }
 
-        private void btnActualizarContraseña_Click(object sender, EventArgs e)
+        private async void btnActualizarContraseña_Click(object sender, EventArgs e)
         {
             string correo;
             correo = Interaction.InputBox("Correo a resetear: ", "Clinica Imagen - Admin");
@@ -239,6 +219,10 @@ namespace ClinicaImagen
             {
                 MessageBox.Show($"Error al restablecer la contraseña: {ex.Message}", "Clinica Imagen - Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            await _usuarioService.ResetearContrasenaAsync(correo);
+            MainFunc.Email(correo, "Reseteo de contraseña - FZALA",
+                        "Su contrseña fue restablecida.<br>Contraseña nueva: CICliente<br><br>Saludos cordiales,<br>FZALA<br>Para alguna otra consulta inserte email de asesor");
+            MessageBox.Show("La contraseña por defecto es CICliente", "Clinica Imagen - Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button1_Click(object sender, EventArgs e)

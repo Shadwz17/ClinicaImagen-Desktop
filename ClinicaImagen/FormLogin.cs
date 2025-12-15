@@ -1,5 +1,4 @@
 ﻿using System;
-using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicaImagen.Services;
 
 namespace ClinicaImagen
 {
     public partial class FormLogin : Form
     {
-        public FormLogin()
+        private readonly IUsuarioService _usuarioService;
+        private readonly IPacienteService _pacienteService;
+
+        public FormLogin(IUsuarioService? usuarioService = null, IPacienteService? pacienteService = null)
         {
             InitializeComponent();
+            _usuarioService = usuarioService ?? AppServices.UsuarioService ?? throw new InvalidOperationException("UsuarioService no configurado.");
+            _pacienteService = pacienteService ?? AppServices.PacienteService ?? throw new InvalidOperationException("PacienteService no configurado.");
         }
 
 
@@ -24,30 +29,26 @@ namespace ClinicaImagen
             public static string? correoLogin { get; set; }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection(MainFunc.connString);
-            connection.Open();
             informacion.correoLogin = txtUser.Text;
             var correo_form = txtUser.Text;
             var passwd_form = txtPasswd.Text;
-            var loginQuery = new MySqlCommand($"SELECT cargo FROM usuarios WHERE correo=\"{correo_form}\" AND passwd=\"{passwd_form}\"", connection);
-            var reader = loginQuery.ExecuteReader();
-            reader.Read();
+            var cargo = await _usuarioService.ObtenerCargoAsync(correo_form, passwd_form);
 
-            if ((reader.HasRows && reader["cargo"].ToString() == "Asesor"))
+            if (cargo == "Asesor")
             {
-                Paneladmin paneladmin = new Paneladmin();
+                Paneladmin paneladmin = new Paneladmin(_usuarioService);
                 this.Hide();
                 paneladmin.Show();
             }
-            else if (reader.HasRows && reader["cargo"].ToString() == "Doctor")
+            else if (cargo == "Doctor")
             {
-                PanelDoctor form4 = new PanelDoctor();
+                PanelDoctor form4 = new PanelDoctor(_pacienteService);
                 this.Hide();
                 form4.Show();
             }
-            
+
             else
             {
                 MessageBox.Show("Su usuario/contraseña son invalidos o no se encuentra verificado en este momento", "Error de consulta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
