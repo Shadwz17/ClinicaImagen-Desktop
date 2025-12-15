@@ -15,6 +15,7 @@ namespace ClinicaImagen
         public ManualUsuario()
         {
             InitializeComponent();
+            UIStyles.ApplyFormStyles(this);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -23,16 +24,12 @@ namespace ClinicaImagen
         }
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormLogin Login = new FormLogin();
-            Login.Show();
+            MainContainer.Current?.ShowView(new FormLogin());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
- this.Hide();
-            ManualUsuario2 Manual2 = new ManualUsuario2();
-            Manual2.Show();
+            MainContainer.Current?.ShowView(new ManualUsuario2());
         }
     }
 }

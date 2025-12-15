@@ -13,6 +13,7 @@ namespace ClinicaImagen
 {
     public partial class PanelDoctor : Form
     {
+        public PanelDoctor()
         private readonly IPacienteService _pacienteService;
 
         public PanelDoctor(IPacienteService? pacienteService = null)
@@ -20,13 +21,16 @@ namespace ClinicaImagen
             InitializeComponent();
             _pacienteService = pacienteService ?? AppServices.PacienteService ?? throw new InvalidOperationException("PacienteService no configurado.");
             dgvPacientes.ScrollBars = ScrollBars.Horizontal;
+            dgvPacientes.DataSource = Pacientes();
+            UIStyles.ApplyFormStyles(this);
+            UIStyles.ApplyEmptyState(dgvPacientes, "No hay pacientes asignados todavía.");
+            UIStyles.ApplyEmptyState(dgvEntrevistas, "No hay entrevistas registradas para este paciente.");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
-            this.Hide();
-            form3.Show();
+            MainContainer.Current?.ShowView(form3);
         }
 
         DataTable resultados = new DataTable();
@@ -65,9 +69,8 @@ namespace ClinicaImagen
         {
             MessageBox.Show(dgvrowValue);
             Form1 form2 = new Form1();
-            this.Hide();
-            form2.Show();
-                    
+            MainContainer.Current?.ShowView(form2);
+
         }
 
         private void btnEntrevistas_Click(object sender, EventArgs e)

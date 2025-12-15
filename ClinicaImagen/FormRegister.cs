@@ -17,6 +17,7 @@ namespace ClinicaImagen
         public FormRegister()
         {
             InitializeComponent();
+            UIStyles.ApplyFormStyles(this);
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -40,9 +41,7 @@ namespace ClinicaImagen
                     $"El Usuario {nombre} con email: {correo}. Se ha registrado.<br><br>Mensaje de Sistema automatizado de FZALA");
 
                 MessageBox.Show("Usuario registrado correctamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                FormLogin Login = new FormLogin();
-                Login.Show();
+                MainContainer.Current?.ShowView(new FormLogin());
             }
             catch (Exception ex)
             {
@@ -62,9 +61,7 @@ namespace ClinicaImagen
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormLogin formLogin = new FormLogin();
-            this.Hide();
-            formLogin.Show();
+            MainContainer.Current?.ShowView(new FormLogin());
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)

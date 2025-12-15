@@ -21,6 +21,7 @@ namespace ClinicaImagen
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainContainer());
             AppServices.Configure(MainFunc.connString);
             Application.Run(new FormLogin());
 

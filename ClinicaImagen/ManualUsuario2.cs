@@ -15,20 +15,17 @@ namespace ClinicaImagen
         public ManualUsuario2()
         {
             InitializeComponent();
+            UIStyles.ApplyFormStyles(this);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormLogin Login = new FormLogin();
-            Login.Show();
+            MainContainer.Current?.ShowView(new FormLogin());
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ManualUsuario Manual = new ManualUsuario();
-            Manual.Show();
+            MainContainer.Current?.ShowView(new ManualUsuario());
         }
     }
 }

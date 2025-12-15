@@ -22,6 +22,7 @@ namespace ClinicaImagen
         public FormLogin(IUsuarioService? usuarioService = null, IPacienteService? pacienteService = null)
         {
             InitializeComponent();
+            UIStyles.ApplyFormStyles(this);
             _usuarioService = usuarioService ?? AppServices.UsuarioService ?? throw new InvalidOperationException("UsuarioService no configurado.");
             _pacienteService = pacienteService ?? AppServices.PacienteService ?? throw new InvalidOperationException("PacienteService no configurado.");
         }
@@ -71,12 +72,14 @@ namespace ClinicaImagen
 
             if (cargo == "Asesor")
             {
+                MainContainer.Current?.ShowView(new Paneladmin());
                 Paneladmin paneladmin = new Paneladmin(_usuarioService);
                 this.Hide();
                 paneladmin.Show();
             }
             else if (cargo == "Doctor")
             {
+                MainContainer.Current?.ShowView(new PanelDoctor());
                 PanelDoctor form4 = new PanelDoctor(_pacienteService);
                 this.Hide();
                 form4.Show();
@@ -90,9 +93,7 @@ namespace ClinicaImagen
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormRegister Registro = new FormRegister();
-            Registro.Show();
+            MainContainer.Current?.ShowView(new FormRegister());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -122,9 +123,7 @@ namespace ClinicaImagen
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-  this.Hide();
-            ManualUsuario Manual = new ManualUsuario();
-            Manual.Show();
+            MainContainer.Current?.ShowView(new ManualUsuario());
         }
     }
 }

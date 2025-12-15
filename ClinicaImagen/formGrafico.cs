@@ -15,6 +15,7 @@ namespace ClinicaImagen
         public formGrafico()
         {
             InitializeComponent();
+            UIStyles.ApplyFormStyles(this);
         }
     }
 }

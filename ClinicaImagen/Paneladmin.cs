@@ -34,7 +34,11 @@ namespace ClinicaImagen
             datosUsuario();
             lblCorreo.Text = $"Correo: \n{datos[0]}";
             lblUsuario.Text = $"Usuario: \n{datos[1]}";
-            
+            UIStyles.ApplyFormStyles(this);
+            UIStyles.ApplyEmptyState(dgVerificados, "No hay usuarios verificados para mostrar.");
+            UIStyles.ApplyEmptyState(dataGridView1, "No hay usuarios pendientes de verificación.");
+            UIStyles.ApplyEmptyState(dgFormularios, "No se encontraron formularios enviados.");
+
         }
         
         private void datosUsuario()
@@ -294,8 +298,7 @@ namespace ClinicaImagen
         private void btnGraficas_Click(object sender, EventArgs e)
         {
             formGrafico form = new formGrafico();
-            this.Hide();
-            form.Show();
+            MainContainer.Current?.ShowView(form);
         }
 
         private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
