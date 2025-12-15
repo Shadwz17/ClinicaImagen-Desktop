@@ -13,6 +13,9 @@ namespace ClinicaImagen
 {
     public partial class FormLogin : Form
     {
+        private readonly AuthService _authService = new AuthService(MainFunc.connString);
+
+        public FormLogin()
         private readonly IUsuarioService _usuarioService;
         private readonly IPacienteService _pacienteService;
 
@@ -32,6 +35,36 @@ namespace ClinicaImagen
         private async void btnLogin_Click(object sender, EventArgs e)
         {
             informacion.correoLogin = txtUser.Text;
+            var correoForm = txtUser.Text;
+            var passwdForm = txtPasswd.Text;
+
+            try
+            {
+                var result = _authService.AuthenticateUser(correoForm, passwdForm);
+                if (!result.Success)
+                {
+                    MessageBox.Show(result.ErrorMessage, "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (result.Role == "Asesor")
+                {
+                    Paneladmin paneladmin = new Paneladmin();
+                    this.Hide();
+                    paneladmin.Show();
+                }
+                else if (result.Role == "Doctor")
+                {
+                    PanelDoctor form4 = new PanelDoctor();
+                    this.Hide();
+                    form4.Show();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo determinar el rol del usuario.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
             var correo_form = txtUser.Text;
             var passwd_form = txtPasswd.Text;
             var cargo = await _usuarioService.ObtenerCargoAsync(correo_form, passwd_form);
@@ -51,7 +84,7 @@ namespace ClinicaImagen
 
             else
             {
-                MessageBox.Show("Su usuario/contraseña son invalidos o no se encuentra verificado en este momento", "Error de consulta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Error al iniciar sesión: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -3,32 +3,38 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaImagen", "ClinicaImagen\ClinicaImagen.csproj", "{B6F1B9E8-DA02-4A90-A019-22FA262D9161}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaImagen", "ClinicaImagen\\ClinicaImagen.csproj", "{B6F1B9E8-DA02-4A90-A019-22FA262D9161}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{47D3AF91-C7B6-4738-B1E8-467FEAE82A38}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
+        ProjectSection(SolutionItems) = preProject
+                .editorconfig = .editorconfig
+        EndProjectSection
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador", "Instalador\Instalador.vdproj", "{E19E451F-9CF6-4470-B3A6-0E1C6C8AC1DB}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador", "Instalador\\Instalador.vdproj", "{E19E451F-9CF6-4470-B3A6-0E1C6C8AC1DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaImagen.Tests", "ClinicaImagen.Tests\\ClinicaImagen.Tests.csproj", "{B4595539-0A7F-456B-A17D-5E03CB2E2A10}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B6F1B9E8-DA02-4A90-A019-22FA262D9161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6F1B9E8-DA02-4A90-A019-22FA262D9161}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6F1B9E8-DA02-4A90-A019-22FA262D9161}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6F1B9E8-DA02-4A90-A019-22FA262D9161}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E19E451F-9CF6-4470-B3A6-0E1C6C8AC1DB}.Debug|Any CPU.ActiveCfg = Debug
-		{E19E451F-9CF6-4470-B3A6-0E1C6C8AC1DB}.Release|Any CPU.ActiveCfg = Release
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AB948A69-92A9-404E-94E5-BD6FFAFACEC1}
-	EndGlobalSection
+        GlobalSection(SolutionConfigurationPlatforms) = preSolution
+                Debug|Any CPU = Debug|Any CPU
+                Release|Any CPU = Release|Any CPU
+        EndGlobalSection
+        GlobalSection(ProjectConfigurationPlatforms) = postSolution
+                {B6F1B9E8-DA02-4A90-A019-22FA262D9161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+                {B6F1B9E8-DA02-4A90-A019-22FA262D9161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+                {B6F1B9E8-DA02-4A90-A019-22FA262D9161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+                {B6F1B9E8-DA02-4A90-A019-22FA262D9161}.Release|Any CPU.Build.0 = Release|Any CPU
+                {E19E451F-9CF6-4470-B3A6-0E1C6C8AC1DB}.Debug|Any CPU.ActiveCfg = Debug
+                {E19E451F-9CF6-4470-B3A6-0E1C6C8AC1DB}.Release|Any CPU.ActiveCfg = Release
+                {B4595539-0A7F-456B-A17D-5E03CB2E2A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+                {B4595539-0A7F-456B-A17D-5E03CB2E2A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+                {B4595539-0A7F-456B-A17D-5E03CB2E2A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+                {B4595539-0A7F-456B-A17D-5E03CB2E2A10}.Release|Any CPU.Build.0 = Release|Any CPU
+        EndGlobalSection
+        GlobalSection(SolutionProperties) = preSolution
+                HideSolutionNode = FALSE
+        EndGlobalSection
+        GlobalSection(ExtensibilityGlobals) = postSolution
+                SolutionGuid = {AB948A69-92A9-404E-94E5-BD6FFAFACEC1}
+        EndGlobalSection
 EndGlobal
