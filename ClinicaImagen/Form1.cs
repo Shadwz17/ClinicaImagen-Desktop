@@ -17,6 +17,7 @@ namespace ClinicaImagen
         public Form1()
         {
             InitializeComponent();
+            UIStyles.ApplyFormStyles(this);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -69,18 +70,14 @@ namespace ClinicaImagen
             var nuevopaciente = new MySqlCommand($"INSERT INTO paciente (nombre, direccion, telefono,cedula, sexo, idD) VALUES (\"{nombre}\", \"{direccion}\", \"{telefono}\", \"{cedula}\", \"{Genero}\", \"{idDoctor}\")", connection);
             nuevopaciente.ExecuteNonQuery();
             MessageBox.Show("Paciente creado correctamente", "Paciente creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
-            PanelDoctor PanelDoctor = new PanelDoctor();
-            PanelDoctor.Show();
-            
+            MainContainer.Current?.ShowView(new PanelDoctor());
+
 
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PanelDoctor PanelDoctor = new PanelDoctor();
-            PanelDoctor.Show();
+            MainContainer.Current?.ShowView(new PanelDoctor());
         }
 
         private void rbM_CheckedChanged(object sender, EventArgs e)

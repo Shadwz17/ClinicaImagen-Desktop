@@ -16,6 +16,7 @@ namespace ClinicaImagen
         public FormRegister()
         {
             InitializeComponent();
+            UIStyles.ApplyFormStyles(this);
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -46,9 +47,7 @@ namespace ClinicaImagen
                 var registerQuery = new MySqlCommand($"INSERT INTO usuarios (nombre, correo, passwd) VALUES (\"{nombre}\", \"{correo}\", \"{passwd}\")", connection);
                 registerQuery.ExecuteNonQuery();
                 MessageBox.Show("Usuario registrado correctamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                FormLogin Login = new FormLogin();
-                Login.Show();
+                MainContainer.Current?.ShowView(new FormLogin());
             }
         }
 
@@ -64,9 +63,7 @@ namespace ClinicaImagen
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormLogin formLogin = new FormLogin();
-            this.Hide();
-            formLogin.Show();
+            MainContainer.Current?.ShowView(new FormLogin());
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)

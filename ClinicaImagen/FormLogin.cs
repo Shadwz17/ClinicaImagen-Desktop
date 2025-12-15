@@ -16,6 +16,7 @@ namespace ClinicaImagen
         public FormLogin()
         {
             InitializeComponent();
+            UIStyles.ApplyFormStyles(this);
         }
 
 
@@ -37,15 +38,11 @@ namespace ClinicaImagen
 
             if ((reader.HasRows && reader["cargo"].ToString() == "Asesor"))
             {
-                Paneladmin paneladmin = new Paneladmin();
-                this.Hide();
-                paneladmin.Show();
+                MainContainer.Current?.ShowView(new Paneladmin());
             }
             else if (reader.HasRows && reader["cargo"].ToString() == "Doctor")
             {
-                PanelDoctor form4 = new PanelDoctor();
-                this.Hide();
-                form4.Show();
+                MainContainer.Current?.ShowView(new PanelDoctor());
             }
             
             else
@@ -56,9 +53,7 @@ namespace ClinicaImagen
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormRegister Registro = new FormRegister();
-            Registro.Show();
+            MainContainer.Current?.ShowView(new FormRegister());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -88,9 +83,7 @@ namespace ClinicaImagen
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-  this.Hide();
-            ManualUsuario Manual = new ManualUsuario();
-            Manual.Show();
+            MainContainer.Current?.ShowView(new ManualUsuario());
         }
     }
 }

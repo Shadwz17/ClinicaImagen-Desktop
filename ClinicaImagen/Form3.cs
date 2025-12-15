@@ -24,13 +24,12 @@ namespace ClinicaImagen
         public Form3()
         {
             InitializeComponent();
+            UIStyles.ApplyFormStyles(this);
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            PanelDoctor paneldocto = new PanelDoctor();
-            this.Hide();
-            paneldocto.Show();
+            MainContainer.Current?.ShowView(new PanelDoctor());
         }
 
         private void button1_Click(object sender, EventArgs e)
