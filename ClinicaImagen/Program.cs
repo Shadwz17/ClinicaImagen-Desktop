@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Mail;
+using ClinicaImagen.Services;
 
 namespace ClinicaImagen
 {    
@@ -20,6 +21,7 @@ namespace ClinicaImagen
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            AppServices.Configure(MainFunc.connString);
             Application.Run(new FormLogin());
 
         }
