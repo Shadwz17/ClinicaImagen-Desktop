@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicaImagen.Services;
 
 namespace ClinicaImagen
 {
@@ -15,8 +16,14 @@ namespace ClinicaImagen
         private readonly AuthService _authService = new AuthService(MainFunc.connString);
 
         public FormLogin()
+        private readonly IUsuarioService _usuarioService;
+        private readonly IPacienteService _pacienteService;
+
+        public FormLogin(IUsuarioService? usuarioService = null, IPacienteService? pacienteService = null)
         {
             InitializeComponent();
+            _usuarioService = usuarioService ?? AppServices.UsuarioService ?? throw new InvalidOperationException("UsuarioService no configurado.");
+            _pacienteService = pacienteService ?? AppServices.PacienteService ?? throw new InvalidOperationException("PacienteService no configurado.");
         }
 
 
@@ -25,7 +32,7 @@ namespace ClinicaImagen
             public static string? correoLogin { get; set; }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
             informacion.correoLogin = txtUser.Text;
             var correoForm = txtUser.Text;
@@ -58,6 +65,24 @@ namespace ClinicaImagen
                 }
             }
             catch (Exception ex)
+            var correo_form = txtUser.Text;
+            var passwd_form = txtPasswd.Text;
+            var cargo = await _usuarioService.ObtenerCargoAsync(correo_form, passwd_form);
+
+            if (cargo == "Asesor")
+            {
+                Paneladmin paneladmin = new Paneladmin(_usuarioService);
+                this.Hide();
+                paneladmin.Show();
+            }
+            else if (cargo == "Doctor")
+            {
+                PanelDoctor form4 = new PanelDoctor(_pacienteService);
+                this.Hide();
+                form4.Show();
+            }
+
+            else
             {
                 MessageBox.Show($"Error al iniciar sesión: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
