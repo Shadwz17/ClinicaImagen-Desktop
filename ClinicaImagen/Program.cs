@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Net.Mail;
+using ClinicaImagen.Services;
 
 namespace ClinicaImagen
 {    
@@ -20,6 +21,7 @@ namespace ClinicaImagen
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            AppServices.Configure(MainFunc.connString);
             Application.Run(new FormLogin());
 
         }
