@@ -1,5 +1,4 @@
 ﻿using System;
-using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +12,8 @@ namespace ClinicaImagen
 {
     public partial class FormLogin : Form
     {
+        private readonly AuthService _authService = new AuthService(MainFunc.connString);
+
         public FormLogin()
         {
             InitializeComponent();
@@ -26,31 +27,39 @@ namespace ClinicaImagen
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection(MainFunc.connString);
-            connection.Open();
             informacion.correoLogin = txtUser.Text;
-            var correo_form = txtUser.Text;
-            var passwd_form = txtPasswd.Text;
-            var loginQuery = new MySqlCommand($"SELECT cargo FROM usuarios WHERE correo=\"{correo_form}\" AND passwd=\"{passwd_form}\"", connection);
-            var reader = loginQuery.ExecuteReader();
-            reader.Read();
+            var correoForm = txtUser.Text;
+            var passwdForm = txtPasswd.Text;
 
-            if ((reader.HasRows && reader["cargo"].ToString() == "Asesor"))
+            try
             {
-                Paneladmin paneladmin = new Paneladmin();
-                this.Hide();
-                paneladmin.Show();
+                var result = _authService.AuthenticateUser(correoForm, passwdForm);
+                if (!result.Success)
+                {
+                    MessageBox.Show(result.ErrorMessage, "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (result.Role == "Asesor")
+                {
+                    Paneladmin paneladmin = new Paneladmin();
+                    this.Hide();
+                    paneladmin.Show();
+                }
+                else if (result.Role == "Doctor")
+                {
+                    PanelDoctor form4 = new PanelDoctor();
+                    this.Hide();
+                    form4.Show();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo determinar el rol del usuario.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else if (reader.HasRows && reader["cargo"].ToString() == "Doctor")
+            catch (Exception ex)
             {
-                PanelDoctor form4 = new PanelDoctor();
-                this.Hide();
-                form4.Show();
-            }
-            
-            else
-            {
-                MessageBox.Show("Su usuario/contraseña son invalidos o no se encuentra verificado en este momento", "Error de consulta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Error al iniciar sesión: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
