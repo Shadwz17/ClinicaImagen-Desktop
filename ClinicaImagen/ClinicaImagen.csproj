@@ -33,6 +33,8 @@
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="EASendMail" Version="7.9.0.1" />
     <PackageReference Include="IronPdf" Version="2022.11.10347" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
     <PackageReference Include="MySql.Data" Version="8.0.29" />
   </ItemGroup>
 
@@ -49,6 +51,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
